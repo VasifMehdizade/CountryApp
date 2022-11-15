@@ -12,6 +12,10 @@
 		2A64A51A2922B0740012901E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A64A5182922B0740012901E /* Main.storyboard */; };
 		2A64A51C2922B0760012901E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A64A51B2922B0760012901E /* Assets.xcassets */; };
 		2A64A51F2922B0760012901E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A64A51D2922B0760012901E /* LaunchScreen.storyboard */; };
+		2A64A52D2922BE3F0012901E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A52C2922BE3F0012901E /* NetworkManager.swift */; };
+		2AA076682923730E00D779B8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA076672923730E00D779B8 /* LoginController.swift */; };
+		2AD047412922BF11000DE777 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD047402922BF11000DE777 /* NetworkHelper.swift */; };
+		2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD047422922BF49000DE777 /* UIViewController + Ext.swift */; };
 		CD8034DAC7E50BF4DD869C0A /* Pods_Country_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38C94BF9A3B3B44358174A2 /* Pods_Country_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +28,10 @@
 		2A64A51B2922B0760012901E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A64A51E2922B0760012901E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A64A5202922B0760012901E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A64A52C2922BE3F0012901E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2AA076672923730E00D779B8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		2AD047402922BF11000DE777 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		2AD047422922BF49000DE777 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 		CBADF52FB327E845A6AC13E2 /* Pods-Country App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Country App.release.xcconfig"; path = "Target Support Files/Pods-Country App/Pods-Country App.release.xcconfig"; sourceTree = "<group>"; };
 		D38C94BF9A3B3B44358174A2 /* Pods_Country_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Country_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,12 +71,56 @@
 			children = (
 				2A64A5122922B0740012901E /* AppDelegate.swift */,
 				2A64A5142922B0740012901E /* SceneDelegate.swift */,
+				2A64A5262922BD980012901E /* NetworkLayer */,
+				2A64A5292922BDFB0012901E /* Helper */,
+				2A64A52A2922BE090012901E /* Scenes */,
 				2A64A5182922B0740012901E /* Main.storyboard */,
 				2A64A51B2922B0760012901E /* Assets.xcassets */,
 				2A64A51D2922B0760012901E /* LaunchScreen.storyboard */,
 				2A64A5202922B0760012901E /* Info.plist */,
 			);
 			path = "Country App";
+			sourceTree = "<group>";
+		};
+		2A64A5262922BD980012901E /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2A64A5272922BDC30012901E /* Core */,
+				2A64A5282922BDE70012901E /* ManagerFiles */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		2A64A5272922BDC30012901E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2A64A52C2922BE3F0012901E /* NetworkManager.swift */,
+				2AD047402922BF11000DE777 /* NetworkHelper.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2A64A5282922BDE70012901E /* ManagerFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ManagerFiles;
+			sourceTree = "<group>";
+		};
+		2A64A5292922BDFB0012901E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2AD047422922BF49000DE777 /* UIViewController + Ext.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2A64A52A2922BE090012901E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2AA076672923730E00D779B8 /* LoginController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		3F48ACDAF53F72ABA13327EF /* Frameworks */ = {
@@ -85,7 +137,6 @@
 				19009F05D62377EDD7E6ABEE /* Pods-Country App.debug.xcconfig */,
 				CBADF52FB327E845A6AC13E2 /* Pods-Country App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -204,7 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD047412922BF11000DE777 /* NetworkHelper.swift in Sources */,
+				2AA076682923730E00D779B8 /* LoginController.swift in Sources */,
+				2A64A52D2922BE3F0012901E /* NetworkManager.swift in Sources */,
 				2A64A5132922B0740012901E /* AppDelegate.swift in Sources */,
+				2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */,
 				2A64A5152922B0740012901E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
