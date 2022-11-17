@@ -10,6 +10,7 @@
 		2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C619C2926B65700DCCBBE /* RegisterController.swift */; };
 		2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */; };
 		2A1C61AB2926BF0100DCCBBE /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */; };
+		2A1C61AE2926BFB700DCCBBE /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61AD2926BFB700DCCBBE /* OnboardingController.swift */; };
 		2A64A5132922B0740012901E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A5122922B0740012901E /* AppDelegate.swift */; };
 		2A64A5152922B0740012901E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A5142922B0740012901E /* SceneDelegate.swift */; };
 		2A64A51A2922B0740012901E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A64A5182922B0740012901E /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		2A1C619C2926B65700DCCBBE /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
+		2A1C61AD2926BFB700DCCBBE /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		2A64A50F2922B0740012901E /* Country App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Country App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A64A5122922B0740012901E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A64A5142922B0740012901E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2A1C61AC2926BF5B00DCCBBE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2A1C61AD2926BFB700DCCBBE /* OnboardingController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		2A64A5062922B0740012901E = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		2A64A52A2922BE090012901E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2A1C61AC2926BF5B00DCCBBE /* Onboarding */,
 				2A1C61A32926BA2800DCCBBE /* Register */,
 				2A1C619E2926B9C100DCCBBE /* Login */,
 			);
@@ -336,6 +347,7 @@
 				2A1C61AB2926BF0100DCCBBE /* RegisterManager.swift in Sources */,
 				2A64A5132922B0740012901E /* AppDelegate.swift in Sources */,
 				2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */,
+				2A1C61AE2926BFB700DCCBBE /* OnboardingController.swift in Sources */,
 				2A64A5152922B0740012901E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
