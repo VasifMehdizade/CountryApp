@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C619C2926B65700DCCBBE /* RegisterController.swift */; };
 		2A64A5132922B0740012901E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A5122922B0740012901E /* AppDelegate.swift */; };
 		2A64A5152922B0740012901E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A5142922B0740012901E /* SceneDelegate.swift */; };
 		2A64A51A2922B0740012901E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A64A5182922B0740012901E /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		19009F05D62377EDD7E6ABEE /* Pods-Country App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Country App.debug.xcconfig"; path = "Target Support Files/Pods-Country App/Pods-Country App.debug.xcconfig"; sourceTree = "<group>"; };
+		2A1C619C2926B65700DCCBBE /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		2A64A50F2922B0740012901E /* Country App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Country App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A64A5122922B0740012901E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A64A5142922B0740012901E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1C619E2926B9C100DCCBBE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		2A64A5062922B0740012901E = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +127,9 @@
 		2A64A52A2922BE090012901E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2A1C619E2926B9C100DCCBBE /* Login */,
 				2AA076672923730E00D779B8 /* LoginController.swift */,
+				2A1C619C2926B65700DCCBBE /* RegisterController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -258,6 +269,7 @@
 				2AD047412922BF11000DE777 /* NetworkHelper.swift in Sources */,
 				2AA076682923730E00D779B8 /* LoginController.swift in Sources */,
 				2A64A52D2922BE3F0012901E /* NetworkManager.swift in Sources */,
+				2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */,
 				2A64A5132922B0740012901E /* AppDelegate.swift in Sources */,
 				2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */,
 				2A64A5152922B0740012901E /* SceneDelegate.swift in Sources */,

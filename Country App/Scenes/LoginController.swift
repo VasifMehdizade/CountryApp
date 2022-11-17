@@ -27,6 +27,9 @@ class LoginController: UIViewController {
         }
         
         @IBAction func notRegisteredButtonTapped(_ sender: Any) {
+            
+            let controller = storyboard?.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
+            navigationController?.show(controller, sender: nil)
         }
         
         func circleShapeImageView() {
