@@ -18,6 +18,8 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         circleShapeImageView()
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
     }
         
         @IBAction func forgotPasswordButtonTapped(_ sender: Any) {

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-dg-Gr2">
-                                <rect key="frame" x="126.66666666666669" y="409.33333333333331" width="137" height="25.333333333333314"/>
+                                <rect key="frame" x="-273.66666666666669" y="409.33333333333331" width="137" height="25.333333333333314"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
@@ -36,18 +36,19 @@
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <color key="tintColor" red="1" green="0.47843137250000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DPy-dg-Gr2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Xt-25-dZy"/>
+                            <constraint firstItem="DPy-dg-Gr2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-400" id="2Xt-25-dZy"/>
                             <constraint firstItem="DPy-dg-Gr2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S6T-fJ-5fe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="des-XK-YCk"/>
                     <connections>
                         <outlet property="brandLabel" destination="DPy-dg-Gr2" id="BAx-5y-sbn"/>
+                        <outlet property="horizontalConstraint" destination="2Xt-25-dZy" id="WP1-qh-sax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.92307692307691" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="843" y="4"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="jkb-CO-X8E">
@@ -163,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPO-pu-tfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724.6153846153845" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="1548" y="4"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="Ofq-eJ-WQF">
@@ -219,6 +220,18 @@
                                 <rect key="frame" x="247" y="-151" width="297" height="308"/>
                                 <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUN-Vh-Q8f">
+                                <rect key="frame" x="69" y="611" width="252" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="y6S-u4-oNT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Do you have already account?"/>
+                                <connections>
+                                    <action selector="doYouHaveAlreadyAccountButtonTapped:" destination="gdS-Ot-vdt" eventType="touchUpInside" id="VIs-5F-xBw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="70L-NS-Qdh"/>
                         <color key="backgroundColor" red="0.027450980392156862" green="0.38823529411764707" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,13 +249,16 @@
                             <constraint firstItem="70L-NS-Qdh" firstAttribute="trailing" secondItem="dwd-uj-se3" secondAttribute="trailing" constant="18" id="Dv6-vV-rCX"/>
                             <constraint firstItem="gsU-Mx-8OM" firstAttribute="top" secondItem="70L-NS-Qdh" secondAttribute="top" constant="62" id="Hg5-zr-KMy"/>
                             <constraint firstAttribute="trailing" secondItem="y1U-sN-jdB" secondAttribute="trailing" constant="-154" id="Hxs-4v-sMd"/>
+                            <constraint firstItem="cUN-Vh-Q8f" firstAttribute="top" secondItem="dwd-uj-se3" secondAttribute="bottom" constant="16" id="I66-3x-395"/>
                             <constraint firstItem="UiE-x1-Egr" firstAttribute="leading" secondItem="70L-NS-Qdh" secondAttribute="leading" constant="20" id="PBX-6p-UtW"/>
+                            <constraint firstItem="cUN-Vh-Q8f" firstAttribute="width" secondItem="CO1-EV-G2D" secondAttribute="width" multiplier="0.646154" id="Po7-zV-Kz1"/>
                             <constraint firstItem="IHi-D3-ziz" firstAttribute="leading" secondItem="70L-NS-Qdh" secondAttribute="leading" constant="20" id="SJE-nI-Rj8"/>
                             <constraint firstItem="gsU-Mx-8OM" firstAttribute="height" secondItem="CO1-EV-G2D" secondAttribute="height" multiplier="0.127962" id="THd-qD-7z2"/>
                             <constraint firstItem="gsU-Mx-8OM" firstAttribute="width" secondItem="CO1-EV-G2D" secondAttribute="width" multiplier="0.246154" id="UDY-rD-8E7"/>
                             <constraint firstItem="UiE-x1-Egr" firstAttribute="top" secondItem="G6g-Ya-e0y" secondAttribute="bottom" constant="36" id="VXN-AD-6sm"/>
                             <constraint firstItem="JuF-Tz-p2m" firstAttribute="leading" secondItem="70L-NS-Qdh" secondAttribute="leading" constant="20" id="VoE-0M-jDI"/>
                             <constraint firstItem="dwd-uj-se3" firstAttribute="top" secondItem="JuF-Tz-p2m" secondAttribute="bottom" constant="56" id="Zvf-tG-6eh"/>
+                            <constraint firstItem="cUN-Vh-Q8f" firstAttribute="centerX" secondItem="70L-NS-Qdh" secondAttribute="centerX" id="aPx-Iq-swb"/>
                             <constraint firstItem="gsU-Mx-8OM" firstAttribute="leading" secondItem="70L-NS-Qdh" secondAttribute="leading" constant="24" id="dmS-t0-fnu"/>
                             <constraint firstItem="70L-NS-Qdh" firstAttribute="trailing" secondItem="UiE-x1-Egr" secondAttribute="trailing" constant="20" id="j8P-z2-nxQ"/>
                             <constraint firstItem="70L-NS-Qdh" firstAttribute="trailing" secondItem="IHi-D3-ziz" secondAttribute="trailing" constant="20" id="jnz-De-csS"/>
@@ -260,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oe3-cS-1c7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2441.5384615384614" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="2268" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hib-nB-DDN">
