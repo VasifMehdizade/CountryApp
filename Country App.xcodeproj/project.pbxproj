@@ -20,6 +20,7 @@
 		2AA076682923730E00D779B8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA076672923730E00D779B8 /* LoginController.swift */; };
 		2AD047412922BF11000DE777 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD047402922BF11000DE777 /* NetworkHelper.swift */; };
 		2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD047422922BF49000DE777 /* UIViewController + Ext.swift */; };
+		2AEA818D292AD68900D40490 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA818C292AD68900D40490 /* HomeController.swift */; };
 		CD8034DAC7E50BF4DD869C0A /* Pods_Country_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38C94BF9A3B3B44358174A2 /* Pods_Country_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		2AA076672923730E00D779B8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2AD047402922BF11000DE777 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		2AD047422922BF49000DE777 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
+		2AEA818C292AD68900D40490 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CBADF52FB327E845A6AC13E2 /* Pods-Country App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Country App.release.xcconfig"; path = "Target Support Files/Pods-Country App/Pods-Country App.release.xcconfig"; sourceTree = "<group>"; };
 		D38C94BF9A3B3B44358174A2 /* Pods_Country_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Country_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -203,8 +205,41 @@
 				2A1C61AC2926BF5B00DCCBBE /* Onboarding */,
 				2A1C619E2926B9C100DCCBBE /* Login */,
 				2A1C61A32926BA2800DCCBBE /* Register */,
+				2AEA8188292AD65600D40490 /* Home */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2AEA8188292AD65600D40490 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2AEA818B292AD67400D40490 /* Model */,
+				2AEA818A292AD66F00D40490 /* View */,
+				2AEA8189292AD65F00D40490 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2AEA8189292AD65F00D40490 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2AEA818A292AD66F00D40490 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2AEA818C292AD68900D40490 /* HomeController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2AEA818B292AD67400D40490 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3F48ACDAF53F72ABA13327EF /* Frameworks */ = {
@@ -341,6 +376,7 @@
 			files = (
 				2AD047412922BF11000DE777 /* NetworkHelper.swift in Sources */,
 				2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */,
+				2AEA818D292AD68900D40490 /* HomeController.swift in Sources */,
 				2AA076682923730E00D779B8 /* LoginController.swift in Sources */,
 				2A64A52D2922BE3F0012901E /* NetworkManager.swift in Sources */,
 				2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */,
