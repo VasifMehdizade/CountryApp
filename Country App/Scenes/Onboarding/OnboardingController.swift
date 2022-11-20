@@ -12,7 +12,7 @@ class OnboardingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let delay : Double = 0.5
+        let delay : Double = 1
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
         fireTimer()
             
