@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0CAA14292BE56100871162 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CAA13292BE56100871162 /* HomeViewModel.swift */; };
 		2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C619C2926B65700DCCBBE /* RegisterController.swift */; };
 		2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */; };
 		2A1C61AB2926BF0100DCCBBE /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		19009F05D62377EDD7E6ABEE /* Pods-Country App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Country App.debug.xcconfig"; path = "Target Support Files/Pods-Country App/Pods-Country App.debug.xcconfig"; sourceTree = "<group>"; };
+		2A0CAA13292BE56100871162 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2A1C619C2926B65700DCCBBE /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		2AEA8189292AD65F00D40490 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2A0CAA13292BE56100871162 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				2A64A52D2922BE3F0012901E /* NetworkManager.swift in Sources */,
 				2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */,
 				2A1C61AB2926BF0100DCCBBE /* RegisterManager.swift in Sources */,
+				2A0CAA14292BE56100871162 /* HomeViewModel.swift in Sources */,
 				2A64A5132922B0740012901E /* AppDelegate.swift in Sources */,
 				2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */,
 				2A1C61AE2926BFB700DCCBBE /* OnboardingController.swift in Sources */,
