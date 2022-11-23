@@ -9,13 +9,16 @@ import UIKit
 
 class RegisterController: UIViewController {
 
-    @IBOutlet weak var orangeImageView: UIImageView!
-    @IBOutlet weak var createAccountLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var orangeImageView: UIImageView!
     var genders = ["male", "female" , "other"]
     var pickerView = UIPickerView()
     
