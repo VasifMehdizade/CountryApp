@@ -82,9 +82,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-LC-n44">
                                 <rect key="frame" x="18" y="530" width="354" height="58"/>
                                 <color key="backgroundColor" red="0.027450980392156862" green="0.38823529411764707" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="T6P-0D-8Kd"/>
-                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SIGN IN"/>
@@ -98,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvv-WW-2Zt">
-                                <rect key="frame" x="101.66666666666669" y="598" width="187" height="35"/>
+                                <rect key="frame" x="122" y="598" width="146" height="35"/>
                                 <color key="tintColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Not Registered?"/>
@@ -125,33 +122,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pRw-aX-JC3" firstAttribute="height" secondItem="SPf-bH-Dfe" secondAttribute="height" multiplier="0.566351" id="0Ur-yy-3om"/>
+                            <constraint firstItem="hoD-U9-XuF" firstAttribute="trailing" secondItem="Q1W-os-ONK" secondAttribute="trailing" constant="20" id="3CU-4c-Nbs"/>
                             <constraint firstItem="hoD-U9-XuF" firstAttribute="top" secondItem="pRw-aX-JC3" secondAttribute="top" constant="218" id="53v-yk-MbO"/>
-                            <constraint firstItem="T6V-To-j0f" firstAttribute="trailing" secondItem="Q1W-os-ONK" secondAttribute="trailing" id="5S3-Y0-ul4"/>
+                            <constraint firstItem="pvv-WW-2Zt" firstAttribute="top" secondItem="c0o-LC-n44" secondAttribute="bottom" constant="10" id="5HL-6w-NXr"/>
+                            <constraint firstItem="T6V-To-j0f" firstAttribute="trailing" secondItem="Q1W-os-ONK" secondAttribute="trailing" id="5I9-3P-zlX"/>
                             <constraint firstItem="Pv4-Vz-SYY" firstAttribute="height" secondItem="SPf-bH-Dfe" secondAttribute="height" multiplier="0.473934" id="5cv-Ne-iza"/>
-                            <constraint firstItem="hoD-U9-XuF" firstAttribute="trailing" secondItem="c0o-LC-n44" secondAttribute="trailing" constant="18" id="6az-eO-qS4"/>
-                            <constraint firstItem="T6V-To-j0f" firstAttribute="top" secondItem="Q1W-os-ONK" secondAttribute="bottom" constant="28" id="87t-0v-HIQ"/>
                             <constraint firstItem="vf6-YC-o5k" firstAttribute="leading" secondItem="hoD-U9-XuF" secondAttribute="leading" constant="24" id="AaN-Qj-eIR"/>
-                            <constraint firstItem="Q1W-os-ONK" firstAttribute="top" secondItem="hoD-U9-XuF" secondAttribute="top" constant="320" id="Cff-sg-gKT"/>
-                            <constraint firstItem="Q1W-os-ONK" firstAttribute="leading" secondItem="hoD-U9-XuF" secondAttribute="leading" constant="20" id="CrU-wi-Et0"/>
                             <constraint firstItem="vf6-YC-o5k" firstAttribute="top" secondItem="hoD-U9-XuF" secondAttribute="top" constant="56" id="EBT-3k-aPQ"/>
+                            <constraint firstItem="Q1W-os-ONK" firstAttribute="top" secondItem="pRw-aX-JC3" secondAttribute="bottom" constant="60" id="EYl-hn-SYW"/>
                             <constraint firstItem="hoD-U9-XuF" firstAttribute="top" secondItem="Pv4-Vz-SYY" secondAttribute="top" constant="188" id="FHd-NI-mE5"/>
+                            <constraint firstItem="c0o-LC-n44" firstAttribute="leading" secondItem="hoD-U9-XuF" secondAttribute="leading" constant="18" id="IJP-Ma-l7F"/>
                             <constraint firstItem="pRw-aX-JC3" firstAttribute="width" secondItem="SPf-bH-Dfe" secondAttribute="width" multiplier="1.30769" id="Il4-GT-sF5"/>
-                            <constraint firstItem="hoD-U9-XuF" firstAttribute="trailing" secondItem="Q1W-os-ONK" secondAttribute="trailing" constant="20" id="Q2v-uI-Bdu"/>
+                            <constraint firstItem="Zyy-nZ-C0R" firstAttribute="top" secondItem="T6V-To-j0f" secondAttribute="bottom" constant="12" id="NYP-b8-ECh"/>
+                            <constraint firstItem="c0o-LC-n44" firstAttribute="top" secondItem="Zyy-nZ-C0R" secondAttribute="bottom" constant="20" id="OMw-BV-y9r"/>
+                            <constraint firstItem="Zyy-nZ-C0R" firstAttribute="leading" secondItem="T6V-To-j0f" secondAttribute="leading" id="Ofy-OH-Hd5"/>
+                            <constraint firstItem="c0o-LC-n44" firstAttribute="height" secondItem="SPf-bH-Dfe" secondAttribute="height" multiplier="0.0687204" id="PKO-Ob-944"/>
                             <constraint firstItem="hoD-U9-XuF" firstAttribute="trailing" secondItem="pRw-aX-JC3" secondAttribute="trailing" constant="90" id="RDN-ux-peq"/>
                             <constraint firstItem="Pv4-Vz-SYY" firstAttribute="leading" secondItem="hoD-U9-XuF" secondAttribute="leading" constant="160" id="UzO-GA-5Yi"/>
-                            <constraint firstItem="c0o-LC-n44" firstAttribute="top" secondItem="Zyy-nZ-C0R" secondAttribute="bottom" constant="20" id="aP5-mu-FSX"/>
-                            <constraint firstItem="T6V-To-j0f" firstAttribute="leading" secondItem="Q1W-os-ONK" secondAttribute="leading" id="ca3-d6-wzp"/>
+                            <constraint firstItem="T6V-To-j0f" firstAttribute="height" secondItem="SPf-bH-Dfe" secondAttribute="height" multiplier="0.0402844" id="VBx-jJ-ROo"/>
                             <constraint firstItem="vf6-YC-o5k" firstAttribute="width" secondItem="SPf-bH-Dfe" secondAttribute="width" multiplier="0.328205" id="cqq-Hf-fWB"/>
                             <constraint firstItem="vf6-YC-o5k" firstAttribute="height" secondItem="SPf-bH-Dfe" secondAttribute="height" multiplier="0.124408" id="dM6-In-UeP"/>
-                            <constraint firstItem="Zyy-nZ-C0R" firstAttribute="width" secondItem="SPf-bH-Dfe" secondAttribute="width" multiplier="0.410256" id="e5K-x3-wid"/>
-                            <constraint firstItem="hoD-U9-XuF" firstAttribute="trailing" secondItem="Zyy-nZ-C0R" secondAttribute="trailing" constant="210" id="gKK-bZ-pf0"/>
-                            <constraint firstItem="Zyy-nZ-C0R" firstAttribute="leading" secondItem="T6V-To-j0f" secondAttribute="leading" id="hg0-6I-Aha"/>
-                            <constraint firstItem="pvv-WW-2Zt" firstAttribute="centerX" secondItem="c0o-LC-n44" secondAttribute="centerX" id="isQ-fS-ccs"/>
-                            <constraint firstItem="pvv-WW-2Zt" firstAttribute="top" secondItem="c0o-LC-n44" secondAttribute="bottom" constant="10" id="pLw-Ey-gD8"/>
-                            <constraint firstItem="pvv-WW-2Zt" firstAttribute="width" secondItem="SPf-bH-Dfe" secondAttribute="width" multiplier="0.479487" id="qQL-s2-3PO"/>
+                            <constraint firstItem="hoD-U9-XuF" firstAttribute="trailing" secondItem="c0o-LC-n44" secondAttribute="trailing" constant="18" id="iT3-21-8Vc"/>
+                            <constraint firstItem="pvv-WW-2Zt" firstAttribute="centerX" secondItem="hoD-U9-XuF" secondAttribute="centerX" id="j1q-8C-jsC"/>
+                            <constraint firstItem="Q1W-os-ONK" firstAttribute="leading" secondItem="hoD-U9-XuF" secondAttribute="leading" constant="20" id="jrN-7s-Db7"/>
+                            <constraint firstItem="Zyy-nZ-C0R" firstAttribute="width" secondItem="SPf-bH-Dfe" secondAttribute="width" multiplier="0.410256" id="ozE-yn-2sB"/>
+                            <constraint firstItem="T6V-To-j0f" firstAttribute="top" secondItem="Q1W-os-ONK" secondAttribute="bottom" constant="28" id="sOg-hy-0Bd"/>
                             <constraint firstItem="Pv4-Vz-SYY" firstAttribute="width" secondItem="SPf-bH-Dfe" secondAttribute="width" multiplier="1.17436" id="u4D-qU-YG3"/>
-                            <constraint firstItem="Zyy-nZ-C0R" firstAttribute="top" secondItem="T6V-To-j0f" secondAttribute="bottom" constant="12" id="xmk-sU-jcD"/>
-                            <constraint firstItem="c0o-LC-n44" firstAttribute="leading" secondItem="hoD-U9-XuF" secondAttribute="leading" constant="18" id="z62-0D-b6l"/>
+                            <constraint firstItem="Q1W-os-ONK" firstAttribute="height" secondItem="SPf-bH-Dfe" secondAttribute="height" multiplier="0.0402844" id="ugo-pv-ifc"/>
+                            <constraint firstItem="T6V-To-j0f" firstAttribute="leading" secondItem="Q1W-os-ONK" secondAttribute="leading" id="vNu-Ed-kWl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sew-FR-qs8"/>
@@ -164,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPO-pu-tfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1548" y="4"/>
+            <point key="canvasLocation" x="1547.6923076923076" y="3.5545023696682461"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="Ofq-eJ-WQF">
