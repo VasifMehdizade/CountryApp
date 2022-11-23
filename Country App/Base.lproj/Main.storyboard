@@ -235,6 +235,11 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="SIGN UP"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="signupButtonTapped:" destination="6WB-g9-nDW" eventType="touchUpInside" id="NxQ-8x-kEG"/>
                                                 </connections>
@@ -307,6 +312,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tks-xm-gx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2264.6153846153848" y="57.582938388625593"/>
+        </scene>
+        <!--Activation Controller-->
+        <scene sceneID="Xiw-vI-nro">
+            <objects>
+                <viewController storyboardIdentifier="ActivationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zdD-L7-yUh" customClass="ActivationController" customModule="Country_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J3h-s7-XSo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activation process" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egl-kx-w9O">
+                                <rect key="frame" x="99.666666666666686" y="87" width="191" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserId..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hzV-2Z-KGJ">
+                                <rect key="frame" x="20" y="272" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ActivationCode..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-cQ-hmP">
+                                <rect key="frame" x="20" y="376" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7a-N9-kOB">
+                                <rect key="frame" x="20" y="480" width="350" height="57"/>
+                                <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Activate"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="activateButtonTapped:" destination="zdD-L7-yUh" eventType="touchUpInside" id="UkN-UJ-COY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iAJ-DR-KHo"/>
+                        <color key="backgroundColor" red="0.027450980392156862" green="0.38823529411764707" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hzV-2Z-KGJ" firstAttribute="leading" secondItem="iAJ-DR-KHo" secondAttribute="leading" constant="20" id="4V3-sI-g7M"/>
+                            <constraint firstItem="X7a-N9-kOB" firstAttribute="top" secondItem="b0w-cQ-hmP" secondAttribute="bottom" constant="70" id="4dg-Io-Vag"/>
+                            <constraint firstItem="Egl-kx-w9O" firstAttribute="top" secondItem="iAJ-DR-KHo" secondAttribute="top" constant="40" id="57n-20-Bw2"/>
+                            <constraint firstItem="hzV-2Z-KGJ" firstAttribute="top" secondItem="Egl-kx-w9O" secondAttribute="bottom" constant="158" id="8l7-3D-qhd"/>
+                            <constraint firstItem="b0w-cQ-hmP" firstAttribute="top" secondItem="hzV-2Z-KGJ" secondAttribute="bottom" constant="70" id="AB6-uw-RB8"/>
+                            <constraint firstItem="Egl-kx-w9O" firstAttribute="centerX" secondItem="iAJ-DR-KHo" secondAttribute="centerX" id="Hgs-bh-8xP"/>
+                            <constraint firstItem="X7a-N9-kOB" firstAttribute="height" secondItem="J3h-s7-XSo" secondAttribute="height" multiplier="0.0675355" id="J5R-6F-eFo"/>
+                            <constraint firstItem="b0w-cQ-hmP" firstAttribute="trailing" secondItem="hzV-2Z-KGJ" secondAttribute="trailing" id="LIs-mu-eiH"/>
+                            <constraint firstItem="iAJ-DR-KHo" firstAttribute="trailing" secondItem="hzV-2Z-KGJ" secondAttribute="trailing" constant="20" id="b5p-Eh-dDa"/>
+                            <constraint firstItem="b0w-cQ-hmP" firstAttribute="leading" secondItem="hzV-2Z-KGJ" secondAttribute="leading" id="kv5-nP-ezK"/>
+                            <constraint firstItem="Egl-kx-w9O" firstAttribute="width" secondItem="J3h-s7-XSo" secondAttribute="width" multiplier="0.489744" id="lzv-3c-M0S"/>
+                            <constraint firstItem="X7a-N9-kOB" firstAttribute="leading" secondItem="b0w-cQ-hmP" secondAttribute="leading" id="oEx-fv-tM5"/>
+                            <constraint firstItem="X7a-N9-kOB" firstAttribute="trailing" secondItem="b0w-cQ-hmP" secondAttribute="trailing" id="vnt-d0-rbQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activationCodeTextField" destination="b0w-cQ-hmP" id="HYC-D2-Bm5"/>
+                        <outlet property="userIdTextField" destination="b0w-cQ-hmP" id="7HF-FD-KTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4h-L3-fZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3056.9230769230767" y="3.5545023696682461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hib-nB-DDN">

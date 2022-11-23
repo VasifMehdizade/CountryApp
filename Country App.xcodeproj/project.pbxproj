@@ -12,6 +12,7 @@
 		2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */; };
 		2A1C61AB2926BF0100DCCBBE /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */; };
 		2A1C61AE2926BFB700DCCBBE /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61AD2926BFB700DCCBBE /* OnboardingController.swift */; };
+		2A3D23EE292E539400304987 /* ActivationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D23ED292E539400304987 /* ActivationController.swift */; };
 		2A64A5132922B0740012901E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A5122922B0740012901E /* AppDelegate.swift */; };
 		2A64A5152922B0740012901E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A5142922B0740012901E /* SceneDelegate.swift */; };
 		2A64A51A2922B0740012901E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A64A5182922B0740012901E /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
 		2A1C61AD2926BFB700DCCBBE /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		2A3D23ED292E539400304987 /* ActivationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationController.swift; sourceTree = "<group>"; };
 		2A64A50F2922B0740012901E /* Country App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Country App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A64A5122922B0740012901E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A64A5142922B0740012901E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1C619C2926B65700DCCBBE /* RegisterController.swift */,
+				2A3D23ED292E539400304987 /* ActivationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				2AD047412922BF11000DE777 /* NetworkHelper.swift in Sources */,
 				2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */,
 				2AEA818D292AD68900D40490 /* HomeController.swift in Sources */,
+				2A3D23EE292E539400304987 /* ActivationController.swift in Sources */,
 				2AA076682923730E00D779B8 /* LoginController.swift in Sources */,
 				2A64A52D2922BE3F0012901E /* NetworkManager.swift in Sources */,
 				2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */,

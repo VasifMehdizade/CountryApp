@@ -39,7 +39,7 @@ class RegisterController: UIViewController {
     
     @IBAction func doYouHaveAlreadyAccountButtonTapped(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController
-        show(controller, sender: nil)
+        navigationController?.show(controller, sender: nil)
     }
     
     func circleShapeImageView() {
