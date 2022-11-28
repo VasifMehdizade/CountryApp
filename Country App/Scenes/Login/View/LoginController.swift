@@ -15,9 +15,12 @@ class LoginController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var viewModel = LoginViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         circleShapeImageView()
+        configurationViewModel()
         self.navigationItem.setHidesBackButton(true, animated: true)
 
     }
@@ -33,6 +36,19 @@ class LoginController: UIViewController {
             let controller = storyboard?.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
             navigationController?.show(controller, sender: nil)
         }
+    
+    func configurationViewModel() {
+        showLoader()
+        viewModel.loginSetup()
+        viewModel.errorCallback = { message in
+            self.dismissLoader()
+            self.showAlert(message: message) {}
+        }
+        
+        viewModel.successCallback = {
+            self.dismissLoader()
+        }
+    }
         
         func circleShapeImageView() {
             orangeImageView.layer.masksToBounds = true
