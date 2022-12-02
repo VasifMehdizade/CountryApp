@@ -29,6 +29,7 @@ class LoginController: UIViewController {
         }
         
         @IBAction func signInButtonTapped(_ sender: Any) {
+            configurationViewModel()
         }
         
         @IBAction func notRegisteredButtonTapped(_ sender: Any) {
@@ -39,7 +40,10 @@ class LoginController: UIViewController {
     
     func configurationViewModel() {
         showLoader()
-        viewModel.loginSetup()
+        
+        let body : [String : Any] = ["usernameOrEmail" : emailTextField.text ?? "", "password": passwordTextField.text ?? ""]
+        
+        viewModel.loginSetup(body: body)
         viewModel.errorCallback = { message in
             self.dismissLoader()
             self.showAlert(message: message) {}

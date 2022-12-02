@@ -12,9 +12,13 @@ class LoginManager {
     
     func loginRequest (complete: @escaping ((LoginModel?, String?)->())) {
         let url = "http://faradheus-001-site1.itempurl.com/api/Account/login"
+        
+        let jsonData = [String : Any]()
+
         NetworkManager.shared.request(type: LoginModel.self,
                                       url: url,
-                                      method: .post) { response in
+                                      method: .post,
+                                      body: jsonData) { response in
             switch response {
             case .success(let model) :
                 complete(model, nil)

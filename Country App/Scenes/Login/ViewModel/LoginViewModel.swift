@@ -16,7 +16,7 @@ class LoginViewModel {
     var successCallback : (()->())?
     var errorCallback : ((String)->())?
     
-    func loginSetup () {
+    func loginSetup (body: [String : Any]) {
         LoginManager.shared.loginRequest { items, errorMessage in
             if let errorMessage = errorMessage {
                 self.errorCallback?(errorMessage)

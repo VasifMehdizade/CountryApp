@@ -12,9 +12,10 @@ class NetworkManager {
     static let shared = NetworkManager()
     
     
-    func request<T: Codable>(type: T.Type, url: String, method: HTTPMethod, completion: @escaping((Result<T, ErrorTypes>)->())) {
+    func request<T: Codable>(type: T.Type, url: String, method: HTTPMethod, body: [String : Any], completion: @escaping((Result<T, ErrorTypes>)->())) {
         AF.request(url,
-                   method: method).responseData { response in
+                   method: method,
+                   parameters: body).responseData { response in
             switch response.result {
             case .success(let data):
                 self.handleResponse(data : data) { response in
