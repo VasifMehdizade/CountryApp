@@ -11,19 +11,18 @@ class HomeViewModel {
     
     // MARK: Varibles
 
-//    var searchResults = [SearchResult]()
-//
-//    var successCallback : (()->())?
-//    var errorCallback : ((String)->())?
-//    
-//    func getSearchResults (text : String) {
-//        SearchManager.shared.searchResults(text: text) { items, errorMessage in
-//            if let errorMessage = errorMessage {
-//                self.errorCallback?(errorMessage)
-//            } else if let docs = items?.results {
-//                self.searchResults = docs
-//                self.successCallback?()
-//            }
-//        }
-//    }
+    var countryResults : CountryElement?
+    var successCallback : (()->())?
+    var errorCallback : ((String)->())?
+    
+    func getCountryResults() {
+        HomePageManager.shared.getCountries { items, errorMessage in
+            if let errorMessage = errorMessage {
+                self.errorCallback?(errorMessage)
+            } else if let docs = items {
+                self.countryResults = docs
+                self.successCallback?()
+            }
+        }
+    }
 }
