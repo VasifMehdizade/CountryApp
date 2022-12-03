@@ -37,8 +37,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="countryFlag" destination="H2p-sc-9uM" id="0u7-gT-Mls"/>
-                <outlet property="countryName" destination="H2p-sc-9uM" id="UFm-os-V7k"/>
+                <outlet property="countryImage" destination="rP4-69-CGK" id="Fiv-s1-NOx"/>
+                <outlet property="countryName" destination="cPi-7t-BuM" id="hZs-Vz-IVn"/>
             </connections>
             <point key="canvasLocation" x="-115" y="11"/>
         </tableViewCell>

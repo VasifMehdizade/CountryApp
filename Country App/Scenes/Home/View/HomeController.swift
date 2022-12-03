@@ -39,7 +39,7 @@ class HomeController: UIViewController {
 
 extension HomeController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.countryResults?.count
+        viewModel.countryResults?.name.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

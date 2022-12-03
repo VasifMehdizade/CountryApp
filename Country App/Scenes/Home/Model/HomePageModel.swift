@@ -7,6 +7,7 @@ import Foundation
 
 // MARK: - CountryElement
 struct CountryElement: Codable {
+    
     let name: Name
     let tld: [String]?
     let cca2: String
@@ -321,7 +322,11 @@ struct Maps: Codable {
 }
 
 // MARK: - Name
-struct Name: Codable {
+struct Name: Codable, HomePageViewCellProtocol {
+    var countryLabel: String {
+        common
+    }
+    
     let common, official: String
     let nativeName: [String: Translation]?
 }
