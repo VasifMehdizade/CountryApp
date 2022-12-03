@@ -11,8 +11,8 @@ import Foundation
 class HomePageManager {
     static let shared = HomePageManager()
     
-    func getCountries (complete: @escaping ((CountryElement?, String?)->())) {
-        let url = "https://restcountries.com/v3.1/all"
+    func getCountries (text : String, complete: @escaping ((CountryElement?, String?)->())) {
+        let url = "https://restcountries.com/v3.1/name/\(text)"
         NetworkManager.shared.requestWithoutBody(type: CountryElement.self,
                                       url: url,
                                       method: .get) { response in

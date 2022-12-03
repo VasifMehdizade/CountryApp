@@ -15,8 +15,8 @@ class HomeViewModel {
     var successCallback : (()->())?
     var errorCallback : ((String)->())?
     
-    func getCountryResults() {
-        HomePageManager.shared.getCountries { items, errorMessage in
+    func getCountryResults(text : String) {
+        HomePageManager.shared.getCountries(text : text) { items, errorMessage in
             if let errorMessage = errorMessage {
                 self.errorCallback?(errorMessage)
             } else if let docs = items {
