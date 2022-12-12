@@ -20,7 +20,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         circleShapeImageView()
-        configurationViewModel()
+//        configurationViewModel()
         self.navigationItem.setHidesBackButton(true, animated: true)
 
     }
@@ -39,11 +39,12 @@ class LoginController: UIViewController {
         }
     
     func configurationViewModel() {
-        showLoader()
+//        showLoader()
         
-        let body : [String : Any] = ["usernameOrEmail" : emailTextField.text ?? "", "password": passwordTextField.text ?? ""]
+        let body : [String : Any] = ["name" : "Vasif", "job": "engineer"]
         
-        viewModel.loginSetup(body: body)
+//        viewModel.loginSetup()
+        NetworkManager.shared.getPosts(body: body)
         viewModel.errorCallback = { message in
             self.dismissLoader()
             self.showAlert(message: message) {}

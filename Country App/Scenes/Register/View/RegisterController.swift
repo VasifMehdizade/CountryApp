@@ -29,11 +29,24 @@ class RegisterController: UIViewController {
         genderTextField.inputView = pickerView
         circleShapeImageView()
         self.navigationItem.setHidesBackButton(true, animated: true)
-
+        
     }
     
-    @IBAction func signupButtonTapped(_ sender: Any) {
+    func getBody() {
+        let body : [String : Any] = ["name" : nameTextField.text ?? "",
+                                     "surname": surnameTextField.text ?? "",
+                                     "username" : usernameTextField.text ?? "",
+                                     "password" : passwordTextField.text ?? "",
+                                     "confirmPassword" : confirmPasswordTextField.text ?? "",
+                                     "phone" : phoneTextField.text ?? "",
+                                     "email" : emailTextField.text ?? "",
+                                     "gender" : genderTextField.text ?? ""]
         
+        print(body)
+    }
+
+    @IBAction func signupButtonTapped(_ sender: Any) {
+        getBody()
     }
     
     @IBAction func doYouHaveAlreadyAccountButtonTapped(_ sender: Any) {

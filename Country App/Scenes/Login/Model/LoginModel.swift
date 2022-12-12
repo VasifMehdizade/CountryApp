@@ -1,13 +1,11 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  LoginModel.swift
-//  Country App
-//
-//  Created by Vasif Mehdi on 28.11.22.
-//
+//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
 
 import Foundation
 
 // MARK: - Welcome
-struct LoginModel: Codable {
-    let usernameOrEmail, password: String
+struct Welcome: Codable {
+    let name, job, id, createdAt: String
 }

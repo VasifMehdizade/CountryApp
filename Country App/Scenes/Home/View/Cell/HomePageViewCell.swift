@@ -22,7 +22,7 @@ class HomePageViewCell: UITableViewCell {
     }
     
     func configure(item: HomePageViewCellProtocol) {
-        countryName.text = item.name
+        countryName.text = item.countryLabel
     }
     
 }

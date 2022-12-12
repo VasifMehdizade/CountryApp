@@ -1,13 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let country = try? newJSONDecoder().decode(Country.self, from: jsonData)
+//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
 
 import Foundation
 
-// MARK: - CountryElement
+// MARK: - WelcomeElement
 struct CountryElement: Codable {
-    
     let name: Name
     let tld: [String]?
     let cca2: String
@@ -322,11 +321,7 @@ struct Maps: Codable {
 }
 
 // MARK: - Name
-struct Name: Codable, HomePageViewCellProtocol {
-    var countryLabel: String {
-        common
-    }
-    
+struct Name: Codable {
     let common, official: String
     let nativeName: [String: Translation]?
 }
@@ -362,4 +357,4 @@ enum Status: String, Codable {
     case userAssigned = "user-assigned"
 }
 
-typealias Country = [CountryElement]
+typealias Welcome = [WelcomeElement]

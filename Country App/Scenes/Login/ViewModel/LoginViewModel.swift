@@ -11,19 +11,19 @@ class LoginViewModel {
     
     // MARK: Variables
     
-    var loginMessages : LoginModel?
+    var title: String?
     
     var successCallback : (()->())?
     var errorCallback : ((String)->())?
     
-    func loginSetup (body: [String : Any]) {
-        LoginManager.shared.loginRequest { items, errorMessage in
-            if let errorMessage = errorMessage {
-                self.errorCallback?(errorMessage)
-            } else if let docs = items {
-                self.loginMessages = docs
-                self.successCallback?()
-            }
-        }
-    }
+//    func loginSetup () {
+//        LoginManager.shared.loginRequest { items, errorMessage in
+//            if let errorMessage = errorMessage {
+//                self.errorCallback?(errorMessage)
+//            } else if let docs = items {
+//                self.title = docs.title
+//                self.successCallback?()
+//            }
+//        }
+//    }
 }

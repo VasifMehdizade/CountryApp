@@ -11,7 +11,7 @@ class HomeViewModel {
     
     // MARK: Varibles
 
-    var countryResults : CountryElement?
+    var countryResults : Name?
     var successCallback : (()->())?
     var errorCallback : ((String)->())?
     
