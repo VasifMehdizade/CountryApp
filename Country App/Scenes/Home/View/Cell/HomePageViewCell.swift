@@ -13,7 +13,6 @@ protocol HomePageViewCellProtocol {
 }
 
 class HomePageViewCell: UITableViewCell {
-
   
     @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var countryImage: UIImageView!

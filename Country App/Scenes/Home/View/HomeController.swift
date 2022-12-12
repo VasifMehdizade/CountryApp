@@ -24,6 +24,7 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         registerCell()
+        getPosts()
     }
     
     @IBAction func leftNavButtonTapped(_ sender: Any) {
@@ -37,12 +38,13 @@ class HomeController: UIViewController {
     }
     
     func getPosts() {
-
         guard let url = URL(string: "https://restcountries.com/v3.1/all") else {return}
                 AF.request(url, method: .get).responseData { response in
                     do {
                         let posts = try JSONDecoder().decode(([CountryElement].self), from: response.data ?? Data())
                             self.listItems = posts
+                        self.tableView.reloadData()
+
                     }
                     catch {
                         print("error: \(error.localizedDescription)")
@@ -59,7 +61,8 @@ extension HomeController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomePageViewCell", for: indexPath) as! HomePageViewCell
-        cell.countryName.text = listItems[indexPath.row].name.official
+        cell.countryName.text = listItems[indexPath.row].name?.official
+        cell.countryImage.sd_setImage(with: URL(string: listItems[indexPath.row].flags?.png ?? ""))
         return cell
     }
     

@@ -454,6 +454,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UYs-er-Ipf">
                                 <rect key="frame" x="0.0" y="185" width="390" height="576"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yPZ-3s-NbS" id="2ji-oi-1hf"/>
+                                    <outlet property="delegate" destination="yPZ-3s-NbS" id="LdU-mE-ZJc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k9L-Fj-5Nx"/>
