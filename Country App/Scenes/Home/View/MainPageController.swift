@@ -7,30 +7,63 @@
 
 import UIKit
 import Alamofire
+import SDWebImage
 
 class MainPageController: UIViewController {
     
-    
-
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchTextField: UIView!
-    @IBOutlet weak var rightNavButton: UIView!
-    @IBOutlet weak var navLabel: UIView!
+    @IBOutlet weak var leftNavButton: UIButton!
+    @IBOutlet weak var rightNavButton: UIButton!
+    @IBOutlet weak var navLabel: UILabel!
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var myView: UIView!
-    @IBOutlet weak var leftNavButton: UIView!
+    @IBOutlet weak var navStack: UIStackView!
+    @IBOutlet weak var searchStack: UIStackView!
+    @IBOutlet weak var cancelButton: UIButton!
+
+    
     
     var listItems = [CountryElement]()
-
+    var viewModel = SearchViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-registerCell()
         getPosts()
+        setupView()
+        setupTarget()
+    }
+    private func setupView() {
+        registerCell()
+        myView.layer.borderColor = UIColor.lightGray.cgColor
+        myView.layer.borderWidth = 0.5
+    }
+    private func setupTarget() {
+        cancelButton.addTarget(self,
+                               action: #selector(cancelButtonClicked),
+                               for: .touchUpInside)
+    }
+    @objc func cancelButtonClicked() {
+        UIView.animate(withDuration: 0.2) {
+            self.searchStack.isHidden = true
+            self.navStack.isHidden = false
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    @IBAction func leftNavButtonTapped(_ sender: Any) {
+        
     }
     
-    @IBAction func leftNavButtonTapped(_ sender: Any) {
-    }
     @IBAction func rightNavButtonTapped(_ sender: Any) {
+        UIView.animate(withDuration: 0.2) {
+            self.searchStack.isHidden = false
+            self.navStack.isHidden = true
+            self.view.layoutIfNeeded()
+        }
+        
     }
+    
+    
     func registerCell() {
         tableView.register(UINib(nibName: "HomePageViewCell", bundle: nil), forCellReuseIdentifier: "HomePageViewCell")
     }
@@ -48,8 +81,6 @@ registerCell()
             }
         }
     }
-
-
 }
 
 extension MainPageController : UITableViewDelegate, UITableViewDataSource {
@@ -59,8 +90,11 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomePageViewCell", for: indexPath) as! HomePageViewCell
+        
         cell.countryName.text = listItems[indexPath.row].name?.official
         cell.countryImage.sd_setImage(with: URL(string: listItems[indexPath.row].flags?.png ?? ""))
+//        cell.countryName.text = viewModel.searchResults[indexPath.row].name?.common
+//        cell.countryImage.sd_setImage(with: URL(string: viewModel.searchResults[indexPath.row].flags?.png ?? ""))
         return cell
     }
     
@@ -68,3 +102,11 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
         return 50
     }
 }
+
+//extension MainPageController : UITextFieldDelegate {
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        viewModel.searchResults(text: searchTextField.text ?? "")
+//        textField.resignFirstResponder()
+//        return true
+//    }
+//}

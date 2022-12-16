@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIj-Uh-6zX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6392.3076923076924" y="681.75355450236964"/>
+            <point key="canvasLocation" x="6392" y="756"/>
         </scene>
         <!--Main Page Controller-->
         <scene sceneID="Yoa-Yo-euL">
@@ -420,58 +420,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-tu-AJo">
-                                <rect key="frame" x="0.0" y="47" width="390" height="94"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="92"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP0-0X-Job">
-                                        <rect key="frame" x="8" y="8" width="75" height="35"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="seal.fill" catalog="system"/>
-                                        <connections>
-                                            <action selector="leftNavButtonTapped:" destination="aJN-VL-iBk" eventType="touchUpInside" id="166-n4-TCE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muo-Db-1R4">
-                                        <rect key="frame" x="307" y="8" width="75" height="35"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
-                                        <connections>
-                                            <action selector="rightNavButtonTapped:" destination="aJN-VL-iBk" eventType="touchUpInside" id="eVw-Vz-oS3"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9d-C6-0M6">
-                                        <rect key="frame" x="148.66666666666666" y="15" width="93" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-F1-EGx">
-                                        <rect key="frame" x="8" y="52" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="167-lS-YrO">
+                                        <rect key="frame" x="4" y="52" width="382" height="36"/>
+                                        <subviews>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DEH-Eo-z2d">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="0.0"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iby-TR-Ryy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="aJN-VL-iBk" id="nUX-ov-aN7"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2C4-ma-l4o">
+                                                        <rect key="frame" x="334" y="0.0" width="48" height="0.0"/>
+                                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Cancel"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Wtf-1G-IKn">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP0-0X-Job">
+                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="JmB-S2-Lqv"/>
+                                                            <constraint firstAttribute="width" constant="36" id="Mwf-cW-TnP"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title=" " image="line.horizontal.3" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="leftNavButtonTapped:" destination="aJN-VL-iBk" eventType="touchUpInside" id="WEt-HJ-NHP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9d-C6-0M6">
+                                                        <rect key="frame" x="76" y="0.0" width="230" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muo-Db-1R4">
+                                                        <rect key="frame" x="346" y="0.0" width="36" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="36" id="h4I-jo-pHL"/>
+                                                            <constraint firstAttribute="height" constant="36" id="xDc-pK-d9V"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title=" " image="magnifyingglass" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="rightNavButtonTapped:" destination="aJN-VL-iBk" eventType="touchUpInside" id="jSi-t8-s8j"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Muo-Db-1R4" firstAttribute="height" secondItem="hhh-tu-AJo" secondAttribute="height" multiplier="0.37234" id="1wb-jW-Xr6"/>
-                                    <constraint firstItem="c9d-C6-0M6" firstAttribute="centerX" secondItem="hhh-tu-AJo" secondAttribute="centerX" id="Cgm-4O-5wV"/>
-                                    <constraint firstItem="Muo-Db-1R4" firstAttribute="width" secondItem="hhh-tu-AJo" secondAttribute="width" multiplier="0.192308" id="Dar-7U-FHs"/>
-                                    <constraint firstItem="oP0-0X-Job" firstAttribute="height" secondItem="hhh-tu-AJo" secondAttribute="height" multiplier="0.37234" id="Fk5-wA-tpp"/>
-                                    <constraint firstAttribute="trailing" secondItem="Muo-Db-1R4" secondAttribute="trailing" constant="8" id="Gos-UR-Zcr"/>
-                                    <constraint firstItem="c9d-C6-0M6" firstAttribute="centerY" secondItem="oP0-0X-Job" secondAttribute="centerY" id="Ol1-pS-SIF"/>
-                                    <constraint firstItem="c9d-C6-0M6" firstAttribute="width" secondItem="hhh-tu-AJo" secondAttribute="width" multiplier="0.238462" id="TdS-wc-6PD"/>
-                                    <constraint firstItem="e2a-F1-EGx" firstAttribute="leading" secondItem="hhh-tu-AJo" secondAttribute="leading" constant="8" id="TyY-yH-t8K"/>
-                                    <constraint firstItem="oP0-0X-Job" firstAttribute="top" secondItem="hhh-tu-AJo" secondAttribute="top" constant="8" id="YMb-0u-VCo"/>
-                                    <constraint firstItem="oP0-0X-Job" firstAttribute="width" secondItem="hhh-tu-AJo" secondAttribute="width" multiplier="0.192308" id="d79-Z8-0W8"/>
-                                    <constraint firstAttribute="trailing" secondItem="e2a-F1-EGx" secondAttribute="trailing" constant="8" id="dqp-e1-FVA"/>
-                                    <constraint firstAttribute="height" constant="94" id="fiY-mI-xOh"/>
-                                    <constraint firstItem="c9d-C6-0M6" firstAttribute="height" secondItem="hhh-tu-AJo" secondAttribute="height" multiplier="0.223404" id="fkh-pY-xLw"/>
-                                    <constraint firstItem="oP0-0X-Job" firstAttribute="leading" secondItem="hhh-tu-AJo" secondAttribute="leading" constant="8" id="ibh-rx-yhv"/>
-                                    <constraint firstAttribute="bottom" secondItem="e2a-F1-EGx" secondAttribute="bottom" constant="8" id="uxm-Zg-DIX"/>
-                                    <constraint firstItem="Muo-Db-1R4" firstAttribute="top" secondItem="hhh-tu-AJo" secondAttribute="top" constant="8" id="xUf-Qh-xPj"/>
+                                    <constraint firstAttribute="bottom" secondItem="167-lS-YrO" secondAttribute="bottom" constant="4" id="LWO-xX-9cQ"/>
+                                    <constraint firstItem="167-lS-YrO" firstAttribute="leading" secondItem="hhh-tu-AJo" secondAttribute="leading" constant="4" id="M83-xJ-IyK"/>
+                                    <constraint firstAttribute="height" constant="92" id="fiY-mI-xOh"/>
+                                    <constraint firstAttribute="trailing" secondItem="167-lS-YrO" secondAttribute="trailing" constant="4" id="kWM-b1-v8y"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ef-6B-0bB">
-                                <rect key="frame" x="0.0" y="141" width="390" height="620"/>
+                                <rect key="frame" x="0.0" y="92" width="390" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="aJN-VL-iBk" id="M9a-rb-oba"/>
@@ -488,16 +510,19 @@
                             <constraint firstItem="6WD-Si-HGw" firstAttribute="trailing" secondItem="hhh-tu-AJo" secondAttribute="trailing" id="Hlh-aX-AKN"/>
                             <constraint firstItem="0Ef-6B-0bB" firstAttribute="top" secondItem="hhh-tu-AJo" secondAttribute="bottom" id="L6O-kc-AAO"/>
                             <constraint firstItem="0Ef-6B-0bB" firstAttribute="leading" secondItem="6WD-Si-HGw" secondAttribute="leading" id="Ngg-nJ-qtd"/>
-                            <constraint firstItem="hhh-tu-AJo" firstAttribute="top" secondItem="6WD-Si-HGw" secondAttribute="top" id="omf-k5-5c5"/>
+                            <constraint firstItem="hhh-tu-AJo" firstAttribute="top" secondItem="4Oh-BJ-lBG" secondAttribute="top" id="omf-k5-5c5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I4J-jz-Lz6"/>
                     <connections>
-                        <outlet property="leftNavButton" destination="hhh-tu-AJo" id="zKL-dw-vJZ"/>
+                        <outlet property="cancelButton" destination="2C4-ma-l4o" id="u4y-Gx-o14"/>
+                        <outlet property="leftNavButton" destination="oP0-0X-Job" id="JNF-MM-Onc"/>
                         <outlet property="myView" destination="hhh-tu-AJo" id="wh7-hK-BWi"/>
-                        <outlet property="navLabel" destination="hhh-tu-AJo" id="tqk-U0-BCx"/>
-                        <outlet property="rightNavButton" destination="hhh-tu-AJo" id="PIF-e7-Ge5"/>
-                        <outlet property="searchTextField" destination="hhh-tu-AJo" id="Mru-oN-wwg"/>
+                        <outlet property="navLabel" destination="c9d-C6-0M6" id="5e6-fo-2JC"/>
+                        <outlet property="navStack" destination="Wtf-1G-IKn" id="4Bn-Ad-w8G"/>
+                        <outlet property="rightNavButton" destination="Muo-Db-1R4" id="tCG-31-lpP"/>
+                        <outlet property="searchStack" destination="DEH-Eo-z2d" id="E6P-U9-wbw"/>
+                        <outlet property="searchTextField" destination="iby-TR-Ryy" id="szF-wm-kT2"/>
                         <outlet property="tableView" destination="0Ef-6B-0bB" id="yJX-FL-t4e"/>
                     </connections>
                 </viewController>
@@ -544,8 +569,8 @@
     </scenes>
     <resources>
         <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="seal.fill" catalog="system" width="128" height="124"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
