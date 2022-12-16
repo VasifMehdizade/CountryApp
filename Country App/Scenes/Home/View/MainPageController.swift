@@ -33,7 +33,7 @@ class MainPageController: UIViewController {
         setupTarget()
     }
     private func setupView() {
-        registerCell()
+        tableView.registerCell(type: HomePageViewCell.self)
         myView.layer.borderColor = UIColor.lightGray.cgColor
         myView.layer.borderWidth = 0.5
     }
@@ -63,11 +63,6 @@ class MainPageController: UIViewController {
         
     }
     
-    
-    func registerCell() {
-        tableView.register(UINib(nibName: "HomePageViewCell", bundle: nil), forCellReuseIdentifier: "HomePageViewCell")
-    }
-    
     func getPosts() {
         guard let url = URL(string: "https://restcountries.com/v3.1/all") else {return}
         AF.request(url, method: .get).responseData { response in
@@ -89,8 +84,10 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomePageViewCell", for: indexPath) as! HomePageViewCell
-        
+        guard let cell = tableView.dequeueCell(withType: HomePageViewCell.self,
+                                               for: indexPath) as? HomePageViewCell else {
+                  return UITableViewCell()
+        }
         cell.countryName.text = listItems[indexPath.row].name?.official
         cell.countryImage.sd_setImage(with: URL(string: listItems[indexPath.row].flags?.png ?? ""))
 //        cell.countryName.text = viewModel.searchResults[indexPath.row].name?.common
