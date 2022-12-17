@@ -22,12 +22,27 @@ class MainPageController: UIViewController {
     @IBOutlet private weak var cancelButton: UIButton!
     
     var listItems = [CountryElement]()
+    var viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getPosts()
+        configurationViewModel()
         setupView()
         setupTarget()
+    }
+    
+    private func configurationViewModel() {
+        showLoader()
+        viewModel.getCountryResults()
+        viewModel.errorCallback = { message in
+            self.dismissLoader()
+            self.showAlert(message: message) {}
+        }
+        
+        viewModel.successCallback = {
+            self.dismissLoader()
+            self.tableView.reloadData()
+        }
     }
     
     private func setupView() {
@@ -48,7 +63,7 @@ class MainPageController: UIViewController {
             self.navStack.isHidden = false
             self.view.layoutIfNeeded()
         }
-        getPosts()
+        viewModel.getCountryResults()
     }
     
     @IBAction func leftNavButtonTapped(_ sender: Any) {
@@ -63,26 +78,26 @@ class MainPageController: UIViewController {
         }
     }
     
-    func getPosts() {
-        guard let url = URL(string: "https://restcountries.com/v3.1/all") else {return}
-        AF.request(url, method: .get).responseData { response in
-            do {
-                let posts = try JSONDecoder().decode(([CountryElement].self), from: response.data ?? Data())
-                self.listItems = posts
-                self.listItems = self.listItems.sorted(by: { $0.population ?? 0 > $1.population ?? 0})
-                self.tableView.reloadData()
-            }
-            catch {
-                print("error: \(error.localizedDescription)")
-            }
-        }
-    }
+//    func getPosts() {
+//        guard let url = URL(string: "https://restcountries.com/v3.1/all") else {return}
+//        AF.request(url, method: .get).responseData { response in
+//            do {
+//                let posts = try JSONDecoder().decode(([CountryElement].self), from: response.data ?? Data())
+//                self.listItems = posts
+//                self.listItems = self.listItems.sorted(by: { $0.population ?? 0 > $1.population ?? 0})
+//                self.tableView.reloadData()
+//            }
+//            catch {
+//                print("error: \(error.localizedDescription)")
+//            }
+//        }
+//    }
     
     func searchFilter() {
-        for common in listItems {
+        for common in viewModel.countryResults  {
             if (common.name?.common == searchTextField.text) {
-                listItems.removeAll()
-                listItems.append(common)
+                viewModel.countryResults.removeAll()
+                viewModel.countryResults.append(common)
                 tableView.reloadData()
             }
         }
@@ -97,7 +112,7 @@ class MainPageController: UIViewController {
 
 extension MainPageController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listItems.count
+        viewModel.countryResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,8 +120,8 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
                                                for: indexPath) as? HomePageViewCell else {
             return UITableViewCell()
         }
-        cell.countryName.text = "\(indexPath.row + 1 ) \(listItems[indexPath.row].name?.common ?? "")"
-        cell.countryImage.sd_setImage(with: URL(string: listItems[indexPath.row].flags?.png ?? ""))
+        cell.countryName.text = "\(indexPath.row + 1 ) \(viewModel.countryResults[indexPath.row].name?.common ?? "")"
+        cell.countryImage.sd_setImage(with: URL(string: viewModel.countryResults[indexPath.row].flags?.png ?? ""))
         return cell
     }
     

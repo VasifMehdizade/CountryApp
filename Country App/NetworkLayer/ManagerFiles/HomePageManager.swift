@@ -11,9 +11,9 @@ import Foundation
 class HomePageManager {
     static let shared = HomePageManager()
     
-    func getCountries (text : String, complete: @escaping ((Name?, String?)->())) {
-        let url = "https://restcountries.com/v3.1/name/\(text)"
-        NetworkManager.shared.requestWithoutBody(type: Name.self,
+    func getResponse (complete: @escaping (([CountryElement]?, String?)->())) {
+        let url = "https://restcountries.com/v3.1/all"
+        NetworkManager.shared.request(type: [CountryElement].self,
                                       url: url,
                                       method: .get) { response in
             switch response {

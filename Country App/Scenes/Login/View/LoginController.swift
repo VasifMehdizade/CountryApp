@@ -44,7 +44,7 @@ class LoginController: UIViewController {
         let body : [String : Any] = ["name" : "Vasif", "job": "engineer"]
         
 //        viewModel.loginSetup()
-        NetworkManager.shared.getPosts(body: body)
+//        NetworkManager.shared.getPosts(body: body)
         viewModel.errorCallback = { message in
             self.dismissLoader()
             self.showAlert(message: message) {}
