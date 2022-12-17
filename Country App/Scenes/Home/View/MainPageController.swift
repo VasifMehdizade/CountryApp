@@ -16,7 +16,7 @@ class MainPageController: UIViewController {
     @IBOutlet private weak var rightNavButton: UIButton!
     @IBOutlet private weak var navLabel: UILabel!
     @IBOutlet private weak var searchTextField: UITextField!
-    @IBOutlet private weak var myView: UIView!
+    @IBOutlet private weak var navView: UIView!
     @IBOutlet private weak var navStack: UIStackView!
     @IBOutlet private weak var searchStack: UIStackView!
     @IBOutlet private weak var cancelButton: UIButton!
@@ -32,8 +32,8 @@ class MainPageController: UIViewController {
     
     private func setupView() {
         tableView.registerCell(type: HomePageViewCell.self)
-        myView.layer.borderColor = UIColor.lightGray.cgColor
-        myView.layer.borderWidth = 0.5
+        tableView.layer.borderColor = UIColor.lightGray.cgColor
+        tableView.layer.borderWidth = 1.5
     }
     
     private func setupTarget() {

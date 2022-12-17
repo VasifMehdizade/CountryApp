@@ -405,7 +405,7 @@
                         <viewLayoutGuide key="safeArea" id="miV-Rf-9kC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="tlE-4E-eRd"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="tray.2" catalog="system" id="tlE-4E-eRd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIj-Uh-6zX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -502,7 +502,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6WD-Si-HGw"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6WD-Si-HGw" firstAttribute="bottom" secondItem="0Ef-6B-0bB" secondAttribute="bottom" id="8Kx-2O-Tsm"/>
                             <constraint firstItem="hhh-tu-AJo" firstAttribute="leading" secondItem="6WD-Si-HGw" secondAttribute="leading" id="8Wl-Lm-tcC"/>
@@ -517,9 +517,9 @@
                     <connections>
                         <outlet property="cancelButton" destination="2C4-ma-l4o" id="u4y-Gx-o14"/>
                         <outlet property="leftNavButton" destination="oP0-0X-Job" id="JNF-MM-Onc"/>
-                        <outlet property="myView" destination="hhh-tu-AJo" id="wh7-hK-BWi"/>
                         <outlet property="navLabel" destination="c9d-C6-0M6" id="5e6-fo-2JC"/>
                         <outlet property="navStack" destination="Wtf-1G-IKn" id="4Bn-Ad-w8G"/>
+                        <outlet property="navView" destination="hhh-tu-AJo" id="GoQ-C2-g4s"/>
                         <outlet property="rightNavButton" destination="Muo-Db-1R4" id="tCG-31-lpP"/>
                         <outlet property="searchStack" destination="DEH-Eo-z2d" id="E6P-U9-wbw"/>
                         <outlet property="searchTextField" destination="iby-TR-Ryy" id="szF-wm-kT2"/>
@@ -534,10 +534,11 @@
         <scene sceneID="l90-M9-2cQ">
             <objects>
                 <tabBarController id="wBk-5i-q9t" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vDI-tG-4dn">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="vDI-tG-4dn">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="6Uo-qV-k25" kind="relationship" relationship="viewControllers" id="uxi-L4-fEC"/>
@@ -552,7 +553,7 @@
         <scene sceneID="mpt-pz-tJl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6Uo-qV-k25" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="Uo8-OR-QzB"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Uo8-OR-QzB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wuL-mh-yXA">
                         <autoresizingMask key="autoresizingMask"/>
@@ -568,17 +569,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="tray.2" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
