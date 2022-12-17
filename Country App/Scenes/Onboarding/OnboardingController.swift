@@ -18,7 +18,6 @@ class OnboardingController: UIViewController {
         let delay : Double = 2
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             fireTimer()
-            
         }
         
         func fireTimer() {
