@@ -11,20 +11,17 @@ import SDWebImage
 
 class MainPageController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var leftNavButton: UIButton!
-    @IBOutlet weak var rightNavButton: UIButton!
-    @IBOutlet weak var navLabel: UILabel!
-    @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var myView: UIView!
-    @IBOutlet weak var navStack: UIStackView!
-    @IBOutlet weak var searchStack: UIStackView!
-    @IBOutlet weak var cancelButton: UIButton!
-
-    
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var leftNavButton: UIButton!
+    @IBOutlet private weak var rightNavButton: UIButton!
+    @IBOutlet private weak var navLabel: UILabel!
+    @IBOutlet private weak var searchTextField: UITextField!
+    @IBOutlet private weak var myView: UIView!
+    @IBOutlet private weak var navStack: UIStackView!
+    @IBOutlet private weak var searchStack: UIStackView!
+    @IBOutlet private weak var cancelButton: UIButton!
     
     var listItems = [CountryElement]()
-    var viewModel = SearchViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,24 +29,28 @@ class MainPageController: UIViewController {
         setupView()
         setupTarget()
     }
+    
     private func setupView() {
         tableView.registerCell(type: HomePageViewCell.self)
         myView.layer.borderColor = UIColor.lightGray.cgColor
         myView.layer.borderWidth = 0.5
     }
+    
     private func setupTarget() {
         cancelButton.addTarget(self,
                                action: #selector(cancelButtonClicked),
                                for: .touchUpInside)
     }
+    
     @objc func cancelButtonClicked() {
         UIView.animate(withDuration: 0.2) {
             self.searchStack.isHidden = true
             self.navStack.isHidden = false
             self.view.layoutIfNeeded()
         }
-        
+        getPosts()
     }
+    
     @IBAction func leftNavButtonTapped(_ sender: Any) {
         
     }
@@ -60,7 +61,6 @@ class MainPageController: UIViewController {
             self.navStack.isHidden = true
             self.view.layoutIfNeeded()
         }
-        
     }
     
     func getPosts() {
@@ -69,6 +69,7 @@ class MainPageController: UIViewController {
             do {
                 let posts = try JSONDecoder().decode(([CountryElement].self), from: response.data ?? Data())
                 self.listItems = posts
+                self.listItems = self.listItems.sorted(by: { $0.population ?? 0 > $1.population ?? 0})
                 self.tableView.reloadData()
             }
             catch {
@@ -76,6 +77,22 @@ class MainPageController: UIViewController {
             }
         }
     }
+    
+    func searchFilter() {
+        for common in listItems {
+            if (common.name?.common == searchTextField.text) {
+                listItems.removeAll()
+                listItems.append(common)
+                tableView.reloadData()
+            }
+        }
+    }
+    
+//    func findFiltering() {
+//        var filterVariable = listItems.filter({$0.name?.common == searchTextField.text ?? ""})
+//        print(filterVariable)
+//    }
+    
 }
 
 extension MainPageController : UITableViewDelegate, UITableViewDataSource {
@@ -86,12 +103,10 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueCell(withType: HomePageViewCell.self,
                                                for: indexPath) as? HomePageViewCell else {
-                  return UITableViewCell()
+            return UITableViewCell()
         }
-        cell.countryName.text = listItems[indexPath.row].name?.official
+        cell.countryName.text = "\(indexPath.row + 1 ) \(listItems[indexPath.row].name?.common ?? "")"
         cell.countryImage.sd_setImage(with: URL(string: listItems[indexPath.row].flags?.png ?? ""))
-//        cell.countryName.text = viewModel.searchResults[indexPath.row].name?.common
-//        cell.countryImage.sd_setImage(with: URL(string: viewModel.searchResults[indexPath.row].flags?.png ?? ""))
         return cell
     }
     
@@ -100,10 +115,10 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-//extension MainPageController : UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        viewModel.searchResults(text: searchTextField.text ?? "")
-//        textField.resignFirstResponder()
-//        return true
-//    }
-//}
+extension MainPageController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchFilter()
+        textField.resignFirstResponder()
+        return true
+    }
+}

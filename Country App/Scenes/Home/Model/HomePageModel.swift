@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - WelcomeElement
 struct CountryElement: Codable {
-    let name: Name?
+    var name: Name?
     let tld: [String]?
     let cca2: String?
     let ccn3: String?
@@ -322,7 +322,7 @@ struct Maps: Codable {
 
 // MARK: - Name
 struct Name: Codable {
-    let common, official: String?
+    var common, official: String?
     let nativeName: [String: Translation]?
 }
 
