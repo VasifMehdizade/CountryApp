@@ -128,6 +128,12 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DetailController") as! DetailController
+         self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }
 
 extension MainPageController : UITextFieldDelegate {
