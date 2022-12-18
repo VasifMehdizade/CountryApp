@@ -27,6 +27,8 @@
 		2A64A52D2922BE3F0012901E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A52C2922BE3F0012901E /* NetworkManager.swift */; };
 		2A6ED82E294EF44A00ADEED8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6ED82D294EF44A00ADEED8 /* DetailController.swift */; };
 		2AA076682923730E00D779B8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA076672923730E00D779B8 /* LoginController.swift */; };
+		2ACB5B39294F519600493F1A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB5B38294F519600493F1A /* DetailViewModel.swift */; };
+		2ACB5B3B294F520800493F1A /* DetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB5B3A294F520800493F1A /* DetailManager.swift */; };
 		2AD047412922BF11000DE777 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD047402922BF11000DE777 /* NetworkHelper.swift */; };
 		2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD047422922BF49000DE777 /* UIViewController + Ext.swift */; };
 		2AFC6AB22935397600A79EEE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFC6AB12935397600A79EEE /* LoginModel.swift */; };
@@ -58,6 +60,8 @@
 		2A64A52C2922BE3F0012901E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2A6ED82D294EF44A00ADEED8 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		2AA076672923730E00D779B8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		2ACB5B38294F519600493F1A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		2ACB5B3A294F520800493F1A /* DetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailManager.swift; sourceTree = "<group>"; };
 		2AD047402922BF11000DE777 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		2AD047422922BF49000DE777 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 		2AFC6AB12935397600A79EEE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */,
 				2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */,
 				2A0F3B4B293A1B480095DB53 /* HomePageManager.swift */,
+				2ACB5B3A294F520800493F1A /* DetailManager.swift */,
 			);
 			path = ManagerFiles;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				2A0CAA13292BE56100871162 /* HomeViewModel.swift */,
+				2ACB5B38294F519600493F1A /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 			files = (
 				2AD047412922BF11000DE777 /* NetworkHelper.swift in Sources */,
 				2AFC6AB22935397600A79EEE /* LoginModel.swift in Sources */,
+				2ACB5B3B294F520800493F1A /* DetailManager.swift in Sources */,
 				2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */,
 				2A3D23EE292E539400304987 /* ActivationController.swift in Sources */,
 				2A246998294BEABE0078875B /* MainPageController.swift in Sources */,
@@ -453,6 +460,7 @@
 				2A1C61AB2926BF0100DCCBBE /* RegisterManager.swift in Sources */,
 				2A0CAA14292BE56100871162 /* HomeViewModel.swift in Sources */,
 				2A24699E294CF4FA0078875B /* Extension.swift in Sources */,
+				2ACB5B39294F519600493F1A /* DetailViewModel.swift in Sources */,
 				2A64A5132922B0740012901E /* AppDelegate.swift in Sources */,
 				2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */,
 				2A1C61AE2926BFB700DCCBBE /* OnboardingController.swift in Sources */,

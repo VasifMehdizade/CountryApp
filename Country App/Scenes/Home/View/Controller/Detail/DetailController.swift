@@ -9,6 +9,9 @@ import UIKit
 
 class DetailController: UIViewController {
     
+    var countryCommonName = ""
+    
+    var viewModel = DetailViewModel()
     
     @IBOutlet weak var navLabel: UILabel!
     @IBOutlet weak var countryName: UILabel!
@@ -29,10 +32,25 @@ class DetailController: UIViewController {
     @IBOutlet weak var populationAreaResponse: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageResponse: UILabel!
-    
-    
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navLabel.text = viewModel
     }
+    
+    private func configurationViewModel() {
+        showLoader()
+        viewModel.getCountryDetailResults(text: countryCommonName)
+        viewModel.errorCallback = { message in
+            self.dismissLoader()
+            self.showAlert(message: message) {}
+        }
+        
+        viewModel.successCallback = {
+            self.dismissLoader()
+        }
+    }
+    
+    
 }
