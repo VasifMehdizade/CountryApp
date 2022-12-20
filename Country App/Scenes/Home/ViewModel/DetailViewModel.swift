@@ -11,7 +11,7 @@ class DetailViewModel {
     
     // MARK: Varibles
 
-    var countryDetailResults = [CountryElement]()
+    var countryDetailResults : CountryElement?
     var successCallback : (()->())?
     var errorCallback : ((String)->())?
     

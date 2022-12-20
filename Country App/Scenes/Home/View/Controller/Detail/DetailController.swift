@@ -36,7 +36,7 @@ class DetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        navLabel.text = viewModel
+        navLabel.text = viewModel.countryDetailResults?.name?.common
     }
     
     private func configurationViewModel() {

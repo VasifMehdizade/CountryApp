@@ -132,7 +132,7 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DetailController") as! DetailController
-        nextViewController.countryName.text = viewModel.countryResults[indexPath.row].name?.common
+        nextViewController.countryCommonName = viewModel.countryResults[indexPath.row].name?.common ?? ""
          self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
