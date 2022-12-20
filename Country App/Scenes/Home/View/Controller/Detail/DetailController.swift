@@ -6,12 +6,20 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailController: UIViewController {
     
     var countryCommonName = ""
     
-    var viewModel = DetailViewModel()
+    var listItems = [DetailElement]()
+    
+    var allDays = ""
+    
+    
+    //    var variable = listItems
+    
+    //    var viewModel = DetailViewModel()
     
     @IBOutlet weak var navLabel: UILabel!
     @IBOutlet weak var countryName: UILabel!
@@ -32,25 +40,46 @@ class DetailController: UIViewController {
     @IBOutlet weak var populationAreaResponse: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageResponse: UILabel!
-     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getPosts(text: countryCommonName)
+        //        configurationViewModel()
+        initila()
         
-        navLabel.text = viewModel.countryDetailResults?.name?.common
     }
     
-    private func configurationViewModel() {
-        showLoader()
-        viewModel.getCountryDetailResults(text: countryCommonName)
-        viewModel.errorCallback = { message in
-            self.dismissLoader()
-            self.showAlert(message: message) {}
-        }
-        
-        viewModel.successCallback = {
-            self.dismissLoader()
+    //    private func configurationViewModel() {
+    //        showLoader()
+    //        viewModel.getDetailResults(text: countryCommonName)
+    //        viewModel.errorCallback = { message in
+    //            self.dismissLoader()
+    //            self.showAlert(message: message) {}
+    //        }
+    //
+    //        viewModel.successCallback = {
+    //            self.dismissLoader()
+    //        }
+    //    }
+    
+    func getPosts(text : String) {
+        guard let url = URL(string: "https://restcountries.com/v3.1/name/\(text)") else {return}
+        AF.request(url, method: .get).responseData { response in
+            do {
+                let posts = try JSONDecoder().decode(([DetailElement].self), from: response.data ?? Data())
+                self.listItems = posts
+                print(posts)
+                print(self.listItems)
+            }
+            catch {
+                print("error: \(error.localizedDescription)")
+            }
         }
     }
     
+    func initila() {
+        let num = listItems[0].name.common
+        navLabel.text = num
+    }
     
 }
