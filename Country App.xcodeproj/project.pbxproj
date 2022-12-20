@@ -15,10 +15,9 @@
 		2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C619C2926B65700DCCBBE /* RegisterController.swift */; };
 		2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */; };
 		2A1C61AB2926BF0100DCCBBE /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */; };
-		2A1C61AE2926BFB700DCCBBE /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C61AD2926BFB700DCCBBE /* OnboardingController.swift */; };
 		2A246998294BEABE0078875B /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A246997294BEABE0078875B /* MainPageController.swift */; };
 		2A24699E294CF4FA0078875B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A24699D294CF4FA0078875B /* Extension.swift */; };
-		2A3D23EE292E539400304987 /* ActivationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D23ED292E539400304987 /* ActivationController.swift */; };
+		2A44162D2950E421001B4D28 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44162C2950E421001B4D28 /* RegisterModel.swift */; };
 		2A64A5132922B0740012901E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A5122922B0740012901E /* AppDelegate.swift */; };
 		2A64A5152922B0740012901E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A5142922B0740012901E /* SceneDelegate.swift */; };
 		2A64A51A2922B0740012901E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A64A5182922B0740012901E /* Main.storyboard */; };
@@ -46,10 +45,9 @@
 		2A1C619C2926B65700DCCBBE /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		2A1C61A82926BEAA00DCCBBE /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		2A1C61AA2926BF0100DCCBBE /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
-		2A1C61AD2926BFB700DCCBBE /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		2A246997294BEABE0078875B /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		2A24699D294CF4FA0078875B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		2A3D23ED292E539400304987 /* ActivationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationController.swift; sourceTree = "<group>"; };
+		2A44162C2950E421001B4D28 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		2A64A50F2922B0740012901E /* Country App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Country App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A64A5122922B0740012901E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A64A5142922B0740012901E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				2A1C619C2926B65700DCCBBE /* RegisterController.swift */,
-				2A3D23ED292E539400304987 /* ActivationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +151,7 @@
 		2A1C61A72926BA4B00DCCBBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A44162C2950E421001B4D28 /* RegisterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,7 +159,6 @@
 		2A1C61AC2926BF5B00DCCBBE /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				2A1C61AD2926BFB700DCCBBE /* OnboardingController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -447,9 +444,9 @@
 				2AFC6AB22935397600A79EEE /* LoginModel.swift in Sources */,
 				2ACB5B3B294F520800493F1A /* DetailManager.swift in Sources */,
 				2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */,
-				2A3D23EE292E539400304987 /* ActivationController.swift in Sources */,
 				2A246998294BEABE0078875B /* MainPageController.swift in Sources */,
 				2A0F3B4A293A1ACF0095DB53 /* HomePageModel.swift in Sources */,
+				2A44162D2950E421001B4D28 /* RegisterModel.swift in Sources */,
 				2A0990EC293A565B00D760EA /* HomePageViewCell.swift in Sources */,
 				2AA076682923730E00D779B8 /* LoginController.swift in Sources */,
 				2A6ED82E294EF44A00ADEED8 /* DetailController.swift in Sources */,
@@ -463,7 +460,6 @@
 				2ACB5B39294F519600493F1A /* DetailViewModel.swift in Sources */,
 				2A64A5132922B0740012901E /* AppDelegate.swift in Sources */,
 				2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */,
-				2A1C61AE2926BFB700DCCBBE /* OnboardingController.swift in Sources */,
 				2A64A5152922B0740012901E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,9 @@
 import UIKit
 
 class RegisterController: UIViewController {
-
+    
+    var loginArray = [UserModel]()
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -27,26 +29,35 @@ class RegisterController: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         genderTextField.inputView = pickerView
+        
         circleShapeImageView()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        
     }
     
-    func getBody() {
-        let body : [String : Any] = ["name" : nameTextField.text ?? "",
-                                     "surname": surnameTextField.text ?? "",
-                                     "username" : usernameTextField.text ?? "",
-                                     "password" : passwordTextField.text ?? "",
-                                     "confirmPassword" : confirmPasswordTextField.text ?? "",
-                                     "phone" : phoneTextField.text ?? "",
-                                     "email" : emailTextField.text ?? "",
-                                     "gender" : genderTextField.text ?? ""]
-        
-        print(body)
-    }
-
     @IBAction func signupButtonTapped(_ sender: Any) {
-        getBody()
+        let loginText = UserModel(name: nameTextField.text ?? "",
+                                                        surname: surnameTextField.text ?? "",
+                                                        username: usernameTextField.text ?? "",
+                                                        password: passwordTextField.text ?? "",
+                                                        confirmPassword: confirmPasswordTextField.text ?? "",
+                                                        phone: phoneTextField.text ?? "" ,
+                                                        email: emailTextField.text ?? "",
+                                                        gender: genderTextField.text ?? "")
+        
+        loginArray.append(loginText)
+        
+        print(loginArray)
+        
+        for sth in loginArray{
+            print(sth.name)
+        }
+        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+        
+        controller.userMail = loginArray[0].email
+        controller.userPassword = loginArray[0].password
+
+        navigationController?.show(controller, sender: nil)
     }
     
     @IBAction func doYouHaveAlreadyAccountButtonTapped(_ sender: Any) {
@@ -78,5 +89,4 @@ extension RegisterController : UIPickerViewDelegate, UIPickerViewDataSource {
         genderTextField.text = genders[row]
         genderTextField.resignFirstResponder()
     }
-    
 }
