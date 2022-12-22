@@ -39,6 +39,8 @@ class LoginController: UIViewController {
         if emailTextField.text == userMail && passwordTextField.text == userPassword {
                 let controller = storyboard?.instantiateViewController(withIdentifier: "MainPageController") as! MainPageController
                 navigationController?.show(controller, sender: nil)
+            UserDefaults.standard.set(true, forKey: "isLoggedIn")
+
             }
         }
     

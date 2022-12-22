@@ -88,7 +88,7 @@ class DetailController: UIViewController {
                 print(user.name?.common ?? "")
                 navLabel.text = user.name?.common
                 countryName.text = user.name?.common
-                flagImage.sd_setImage(with: URL(string: user.coatOfArms?.png ?? ""))
+//                flagImage.sd_setImage(with: URL(string: user.coatOfArms?.png ?? ""))
                 regionResponse.text = user.region?.rawValue
                 areaResponse.text = "\(user.area ?? 0.0)"
                 populationResponse.text = "\(user.population ?? 0)"

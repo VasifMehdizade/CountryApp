@@ -16,11 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
-        let navigationController = UINavigationController(rootViewController: nextViewController)
-        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-        appdelegate.window?.rootViewController = navigationController
+//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+//        let navigationController = UINavigationController(rootViewController: nextViewController)
+
         
+        if UserDefaults.standard.bool(forKey: "isLoggedIn") {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainPageController") as! MainPageController
+            let navigationController = UINavigationController(rootViewController: nextViewController)
+            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+            appdelegate.window?.rootViewController = navigationController
+        }
+        else{
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+            let navigationController = UINavigationController(rootViewController: nextViewController)
+            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+            appdelegate.window?.rootViewController = navigationController
+        }
+        window?.makeKeyAndVisible()
+
         return true
     }
 
