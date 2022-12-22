@@ -7,15 +7,14 @@
 
 import UIKit
 import Alamofire
+import SDWebImage
+
 
 class DetailController: UIViewController {
     
     var countryCommonName = ""
     
-    var listItems = [DetailElement]()
-    
-    var allDays = ""
-    
+    var listItems = [CountryElement]()
     
     //    var variable = listItems
     
@@ -41,10 +40,14 @@ class DetailController: UIViewController {
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageResponse: UILabel!
     
+    @IBOutlet weak var bordersLabel: UILabel!
+    @IBOutlet weak var bordersResponse: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         getPosts(text: countryCommonName)
-        //        configurationViewModel()
+//                configurationViewModel()
+        
+
         initila()
         
     }
@@ -66,10 +69,11 @@ class DetailController: UIViewController {
         guard let url = URL(string: "https://restcountries.com/v3.1/name/\(text)") else {return}
         AF.request(url, method: .get).responseData { response in
             do {
-                let posts = try JSONDecoder().decode(([DetailElement].self), from: response.data ?? Data())
+                let posts = try JSONDecoder().decode(([CountryElement].self), from: response.data ?? Data())
                 self.listItems = posts
                 print(posts)
-                print(self.listItems)
+                print(self.listItems.count)
+                self.initila()
             }
             catch {
                 print("error: \(error.localizedDescription)")
@@ -78,8 +82,24 @@ class DetailController: UIViewController {
     }
     
     func initila() {
-        let num = listItems[0].name.common
-        navLabel.text = num
+        for user in self.listItems{
+            if user.name?.common == countryCommonName{
+                print(countryCommonName)
+                print(user.name?.common ?? "")
+                navLabel.text = user.name?.common
+                countryName.text = user.name?.common
+                flagImage.sd_setImage(with: URL(string: user.coatOfArms?.png ?? ""))
+                regionResponse.text = user.region?.rawValue
+                areaResponse.text = "\(user.area ?? 0.0)"
+                populationResponse.text = "\(user.population ?? 0)"
+                currencyResponse.text = user.fifa
+                capitalResponse.text = user.capital?.first
+                timezoneResponse.text = user.timezones?.first
+                populationAreaResponse.text = user.capital?.first
+                languageResponse.text = user.languages?.keys.first
+                bordersResponse.text = user.borders?.joined(separator: ", ")
+            }
+        }
     }
     
 }
