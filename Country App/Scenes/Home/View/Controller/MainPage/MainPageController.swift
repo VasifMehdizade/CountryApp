@@ -133,8 +133,7 @@ extension MainPageController : UITableViewDelegate, UITableViewDataSource {
         let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DetailController") as! DetailController
         nextViewController.countryCommonName = viewModel.countryResults[indexPath.row].name?.common ?? ""
-         self.navigationController?.pushViewController(nextViewController, animated: true)
-    }
+        navigationController?.show(nextViewController, sender: nil)    }
 }
 
 extension MainPageController : UITextFieldDelegate {

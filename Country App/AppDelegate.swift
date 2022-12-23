@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         if UserDefaults.standard.bool(forKey: "isLoggedIn") {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainPageController") as! MainPageController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             let navigationController = UINavigationController(rootViewController: nextViewController)
             let appdelegate = UIApplication.shared.delegate as! AppDelegate
             appdelegate.window?.rootViewController = navigationController
@@ -33,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appdelegate.window?.rootViewController = navigationController
         }
         window?.makeKeyAndVisible()
-
         return true
     }
 

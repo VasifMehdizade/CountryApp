@@ -20,9 +20,11 @@ class DetailController: UIViewController {
     
     //    var viewModel = DetailViewModel()
     
+    @IBOutlet weak var flagImage: UILabel!
     @IBOutlet weak var navLabel: UILabel!
     @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var colorfulView: UIView!
     @IBOutlet weak var regionResponse: UILabel!
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var areaResponse: UILabel!
@@ -30,7 +32,6 @@ class DetailController: UIViewController {
     @IBOutlet weak var populationResponse: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyResponse: UILabel!
-    @IBOutlet weak var flagImage: UIImageView!
     @IBOutlet weak var capitalLabel: UILabel!
     @IBOutlet weak var capitalResponse: UILabel!
     @IBOutlet weak var timezoneLabel: UILabel!
@@ -46,10 +47,9 @@ class DetailController: UIViewController {
         super.viewDidLoad()
         getPosts(text: countryCommonName)
 //                configurationViewModel()
-        
-
+        colorfulView.layer.borderWidth = 1.5
+        colorfulView.layer.borderColor = UIColor.black.cgColor
         initila()
-        
     }
     
     //    private func configurationViewModel() {
@@ -88,10 +88,15 @@ class DetailController: UIViewController {
                 print(user.name?.common ?? "")
                 navLabel.text = user.name?.common
                 countryName.text = user.name?.common
-//                flagImage.sd_setImage(with: URL(string: user.coatOfArms?.png ?? ""))
+                flagImage?.text = user.flag
                 regionResponse.text = user.region?.rawValue
-                areaResponse.text = "\(user.area ?? 0.0)"
-                populationResponse.text = "\(user.population ?? 0)"
+                areaResponse.text = "\(user.area ?? 0.0) km2"
+                
+                let a = user.population ?? 0
+                let y = Int(a / 1000000)
+                populationResponse.text = "\(y) mln"
+                
+            
                 currencyResponse.text = user.fifa
                 capitalResponse.text = user.capital?.first
                 timezoneResponse.text = user.timezones?.first
