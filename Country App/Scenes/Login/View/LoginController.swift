@@ -37,11 +37,12 @@ class LoginController: UIViewController {
         print(register.loginArray)
         
         if emailTextField.text == userMail && passwordTextField.text == userPassword {
-                let controller = storyboard?.instantiateViewController(withIdentifier: "MainPageController") as! MainPageController
-                navigationController?.show(controller, sender: nil)
+                let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             UserDefaults.standard.set(true, forKey: "isLoggedIn")
 
-            }
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.main()
+        }
         }
     
     @IBAction func notRegisteredButtonTapped(_ sender: Any) {

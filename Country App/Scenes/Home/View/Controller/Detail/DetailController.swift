@@ -52,6 +52,11 @@ class DetailController: UIViewController {
         initila()
     }
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+//        let controller = storyboard?.instantiateViewController(withIdentifier: "MainPageController") as! MainPageController
+//        show(controller, sender: nil)
+        navigationController?.popToRootViewController(animated: true)
+    }
     //    private func configurationViewModel() {
     //        showLoader()
     //        viewModel.getDetailResults(text: countryCommonName)

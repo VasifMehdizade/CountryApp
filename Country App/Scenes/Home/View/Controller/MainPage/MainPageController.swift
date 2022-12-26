@@ -101,13 +101,7 @@ class MainPageController: UIViewController {
                 tableView.reloadData()
             }
         }
-    }
-    
-//    func findFiltering() {
-//        var filterVariable = listItems.filter({$0.name?.common == searchTextField.text ?? ""})
-//        print(filterVariable)
-//    }
-    
+    }    
 }
 
 extension MainPageController : UITableViewDelegate, UITableViewDataSource {
