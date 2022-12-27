@@ -40,9 +40,9 @@ class DetailController: UIViewController {
     @IBOutlet weak var populationAreaResponse: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageResponse: UILabel!
-    
     @IBOutlet weak var bordersLabel: UILabel!
     @IBOutlet weak var bordersResponse: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getPosts(text: countryCommonName)
@@ -53,9 +53,12 @@ class DetailController: UIViewController {
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-//        let controller = storyboard?.instantiateViewController(withIdentifier: "MainPageController") as! MainPageController
+        let controller = storyboard?.instantiateViewController(withIdentifier: "MainPageController") as! MainPageController
 //        show(controller, sender: nil)
-        navigationController?.popToRootViewController(animated: true)
+//        navigationController?.popToRootViewController(animated: true)
+        print("Fsafd")
+        self.navigationController?.popViewController(animated: true)
+//        navigationController?.show(controller, sender: nil)
     }
     //    private func configurationViewModel() {
     //        showLoader()
@@ -101,7 +104,6 @@ class DetailController: UIViewController {
                 let y = Int(a / 1000000)
                 populationResponse.text = "\(y) mln"
                 
-            
                 currencyResponse.text = user.fifa
                 capitalResponse.text = user.capital?.first
                 timezoneResponse.text = user.timezones?.first
@@ -111,5 +113,4 @@ class DetailController: UIViewController {
             }
         }
     }
-    
 }

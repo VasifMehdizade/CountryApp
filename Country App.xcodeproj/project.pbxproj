@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A059D9B295B3C66007984B8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A059D9A295B3C66007984B8 /* NavController.swift */; };
 		2A0990EC293A565B00D760EA /* HomePageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0990EA293A565B00D760EA /* HomePageViewCell.swift */; };
 		2A0990ED293A565B00D760EA /* HomePageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0990EB293A565B00D760EA /* HomePageViewCell.xib */; };
 		2A0CAA14292BE56100871162 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CAA13292BE56100871162 /* HomeViewModel.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		19009F05D62377EDD7E6ABEE /* Pods-Country App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Country App.debug.xcconfig"; path = "Target Support Files/Pods-Country App/Pods-Country App.debug.xcconfig"; sourceTree = "<group>"; };
+		2A059D9A295B3C66007984B8 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		2A0990EA293A565B00D760EA /* HomePageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewCell.swift; sourceTree = "<group>"; };
 		2A0990EB293A565B00D760EA /* HomePageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageViewCell.xib; sourceTree = "<group>"; };
 		2A0CAA13292BE56100871162 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -158,13 +160,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2A1C61AC2926BF5B00DCCBBE /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		2A24699F294DE5A70078875B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +199,7 @@
 				2A64A51B2922B0760012901E /* Assets.xcassets */,
 				2A64A51D2922B0760012901E /* LaunchScreen.storyboard */,
 				2A64A5202922B0760012901E /* Info.plist */,
+				2A059D9A295B3C66007984B8 /* NavController.swift */,
 			);
 			path = "Country App";
 			sourceTree = "<group>";
@@ -249,7 +245,6 @@
 		2A64A52A2922BE090012901E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2A1C61AC2926BF5B00DCCBBE /* Onboarding */,
 				2A1C619E2926B9C100DCCBBE /* Login */,
 				2A1C61A32926BA2800DCCBBE /* Register */,
 				2AEA8188292AD65600D40490 /* Home */,
@@ -448,6 +443,7 @@
 				2A5F417D2952585900E6F5C0 /* DetailManager.swift in Sources */,
 				2A1C61A92926BEAA00DCCBBE /* LoginManager.swift in Sources */,
 				2A246998294BEABE0078875B /* MainPageController.swift in Sources */,
+				2A059D9B295B3C66007984B8 /* NavController.swift in Sources */,
 				2A0F3B4A293A1ACF0095DB53 /* HomePageModel.swift in Sources */,
 				2A44162D2950E421001B4D28 /* RegisterModel.swift in Sources */,
 				2A0990EC293A565B00D760EA /* HomePageViewCell.swift in Sources */,

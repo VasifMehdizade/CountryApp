@@ -34,10 +34,7 @@ class LoginController: UIViewController {
     
     @IBAction func signInButtonTapped(_ sender: Any) {
 //        configurationViewModel()
-        print(register.loginArray)
-        
         if emailTextField.text == userMail && passwordTextField.text == userPassword {
-                let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             UserDefaults.standard.set(true, forKey: "isLoggedIn")
 
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -52,7 +49,6 @@ class LoginController: UIViewController {
     
     func configurationViewModel() {
 //                showLoader()
-        
         //        let body : [String : Any] = ["name" : "Vasif", "job": "engineer"]
         
         //        viewModel.loginSetup()
