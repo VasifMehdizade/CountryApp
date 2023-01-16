@@ -272,7 +272,7 @@
             </objects>
             <point key="canvasLocation" x="5397" y="429"/>
         </scene>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="VCy-1R-FVK">
             <objects>
                 <viewController id="U7S-Va-Vlg" sceneMemberID="viewController">
@@ -282,11 +282,11 @@
                         <viewLayoutGuide key="safeArea" id="miV-Rf-9kC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="tray.2" catalog="system" id="tlE-4E-eRd"/>
+                    <navigationItem key="navigationItem" id="fjJ-u3-fp0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIj-Uh-6zX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7322" y="883"/>
+            <point key="canvasLocation" x="8057" y="883"/>
         </scene>
         <!--Main Page Controller-->
         <scene sceneID="Yoa-Yo-euL">
@@ -712,36 +712,6 @@
             </objects>
             <point key="canvasLocation" x="8773.8461538461543" y="92.417061611374407"/>
         </scene>
-        <!--Map Controller-->
-        <scene sceneID="1nE-JI-28X">
-            <objects>
-                <viewController storyboardIdentifier="MapController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zm5-a3-nyJ" customClass="MapController" customModule="Country_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="s9n-jN-rAa">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3N-dc-l4O">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="7hn-uj-TVy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="E3N-dc-l4O" firstAttribute="leading" secondItem="7hn-uj-TVy" secondAttribute="leading" id="20p-Zw-ncD"/>
-                            <constraint firstAttribute="bottom" secondItem="E3N-dc-l4O" secondAttribute="bottom" id="VQD-7m-bNy"/>
-                            <constraint firstItem="7hn-uj-TVy" firstAttribute="trailing" secondItem="E3N-dc-l4O" secondAttribute="trailing" id="bbG-ni-y6P"/>
-                            <constraint firstItem="E3N-dc-l4O" firstAttribute="top" secondItem="s9n-jN-rAa" secondAttribute="top" id="f1J-iJ-wva"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mapview" destination="E3N-dc-l4O" id="dqd-iI-Udm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oWG-wm-PuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9493" y="94"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="l90-M9-2cQ">
             <objects>
@@ -754,7 +724,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="6Uo-qV-k25" kind="relationship" relationship="viewControllers" id="uxi-L4-fEC"/>
-                        <segue destination="U7S-Va-Vlg" kind="relationship" relationship="viewControllers" id="ppR-gu-rSB"/>
+                        <segue destination="KRp-vA-97h" kind="relationship" relationship="viewControllers" id="ppR-gu-rSB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ty-mB-hBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -795,6 +765,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U32-yN-YhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3940" y="375"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="ums-c6-d30">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KRp-vA-97h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" image="tray.2" catalog="system" id="tlE-4E-eRd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TLZ-rg-Jah">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U7S-Va-Vlg" kind="relationship" relationship="rootViewController" id="gqx-u3-44N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bs3-SH-HXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7321.538461538461" y="882.93838862559232"/>
         </scene>
     </scenes>
     <resources>

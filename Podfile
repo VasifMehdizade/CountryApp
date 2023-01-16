@@ -7,10 +7,6 @@ target 'Country App' do
 
   pod 'SDWebImage', '~>5.0'
   pod 'Alamofire'
-  pod 'ProgressHUD'
-  pod 'KeychainAccess'
-  pod 'PanModal'
   pod 'Localize-Swift', '~>3.2'
-  pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
 
 end

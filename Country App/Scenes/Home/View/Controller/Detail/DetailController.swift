@@ -97,7 +97,6 @@ class DetailController: UIViewController , CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        if let location = locations.first {
         for locationStruct in listItems{
 
             let coordinate = CLLocationCoordinate2D(latitude: locationStruct.latlng?[0] ?? 0.0, longitude: locationStruct.latlng?[1] ?? 0.0)
