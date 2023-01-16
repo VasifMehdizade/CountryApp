@@ -8,18 +8,17 @@
 import UIKit
 import Alamofire
 import SDWebImage
+import MapKit
 
-
-class DetailController: UIViewController {
+class DetailController: UIViewController , CLLocationManagerDelegate {
     
     var countryCommonName = ""
     
     var listItems = [CountryElement]()
     
-    //    var variable = listItems
+    var locationManager = CLLocationManager()
     
-    //    var viewModel = DetailViewModel()
-    
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var flagImage: UILabel!
     @IBOutlet weak var navLabel: UILabel!
     @IBOutlet weak var countryName: UILabel!
@@ -45,33 +44,18 @@ class DetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
         getPosts(text: countryCommonName)
-//                configurationViewModel()
         colorfulView.layer.borderWidth = 1.5
         colorfulView.layer.borderColor = UIColor.black.cgColor
         initila()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "MainPageController") as! MainPageController
-//        show(controller, sender: nil)
-//        navigationController?.popToRootViewController(animated: true)
-        print("Fsafd")
         self.navigationController?.popViewController(animated: true)
-//        navigationController?.show(controller, sender: nil)
     }
-    //    private func configurationViewModel() {
-    //        showLoader()
-    //        viewModel.getDetailResults(text: countryCommonName)
-    //        viewModel.errorCallback = { message in
-    //            self.dismissLoader()
-    //            self.showAlert(message: message) {}
-    //        }
-    //
-    //        viewModel.successCallback = {
-    //            self.dismissLoader()
-    //        }
-    //    }
     
     func getPosts(text : String) {
         guard let url = URL(string: "https://restcountries.com/v3.1/name/\(text)") else {return}
@@ -90,27 +74,42 @@ class DetailController: UIViewController {
     }
     
     func initila() {
-        for user in self.listItems{
-            if user.name?.common == countryCommonName{
-                print(countryCommonName)
-                print(user.name?.common ?? "")
-                navLabel.text = user.name?.common
-                countryName.text = user.name?.common
-                flagImage?.text = user.flag
-                regionResponse.text = user.region?.rawValue
-                areaResponse.text = "\(user.area ?? 0.0) km2"
+        for item in self.listItems{
+            if item.name?.common == countryCommonName{
+                navLabel.text = item.name?.common
+                countryName.text = item.name?.common
+                flagImage?.text = item.flag
+                regionResponse.text = item.region?.rawValue
+                areaResponse.text = "\(item.area ?? 0.0) km2"
                 
-                let a = user.population ?? 0
+                let a = item.population ?? 0
                 let y = Int(a / 1000000)
                 populationResponse.text = "\(y) mln"
                 
-                currencyResponse.text = user.fifa
-                capitalResponse.text = user.capital?.first
-                timezoneResponse.text = user.timezones?.first
-                populationAreaResponse.text = user.capital?.first
-                languageResponse.text = user.languages?.keys.first
-                bordersResponse.text = user.borders?.joined(separator: ", ")
+                currencyResponse.text = item.fifa
+                capitalResponse.text = item.capital?.first
+                timezoneResponse.text = item.timezones?.first
+                populationAreaResponse.text = item.capital?.first
+                languageResponse.text = item.languages?.keys.first
+                bordersResponse.text = item.borders?.joined(separator: ", ")
             }
         }
     }
-}
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        if let location = locations.first {
+        for locationStruct in listItems{
+
+            let coordinate = CLLocationCoordinate2D(latitude: locationStruct.latlng?[0] ?? 0.0, longitude: locationStruct.latlng?[1] ?? 0.0)
+            print(coordinate)
+            print(coordinate.longitude)
+                
+                _ = MKCoordinateSpan(latitudeDelta: 10000, longitudeDelta: 10000)
+                manager.stopUpdatingLocation()
+                //            let region = MKCoordinateRegion(center: coordinate, span: span)
+                let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: CLLocationDistance(10000), longitudinalMeters: 100000)
+                
+                mapView.setRegion(region, animated: true)
+            }
+        }
+    }

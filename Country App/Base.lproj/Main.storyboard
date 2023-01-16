@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AYK-FY-3He">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AYK-FY-3He">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -543,6 +544,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-8m-5ha">
+                                                        <rect key="frame" x="12" y="387.66666666666674" width="346" height="419.33333333333326"/>
+                                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                                    </mapView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <constraints>
@@ -556,6 +561,7 @@
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Opj-vN-U9V" secondAttribute="trailing" constant="8" id="8bF-kg-RJd"/>
                                                     <constraint firstItem="D1g-a5-8EH" firstAttribute="centerY" secondItem="rqJ-8y-Np5" secondAttribute="centerY" id="Ax8-Bg-5VA"/>
                                                     <constraint firstItem="D1g-a5-8EH" firstAttribute="leading" secondItem="rqJ-8y-Np5" secondAttribute="trailing" constant="4" id="BjE-7N-Kda"/>
+                                                    <constraint firstItem="2zU-8m-5ha" firstAttribute="firstBaseline" secondItem="mqO-KN-kQv" secondAttribute="baseline" constant="11.333333333333334" symbolType="layoutAnchor" id="CUS-Pb-tiM"/>
                                                     <constraint firstAttribute="trailing" secondItem="mqO-KN-kQv" secondAttribute="trailing" constant="8" id="D2G-Jx-ini"/>
                                                     <constraint firstItem="Opj-vN-U9V" firstAttribute="centerY" secondItem="yAa-7F-rW9" secondAttribute="centerY" id="Dfn-OV-A26"/>
                                                     <constraint firstItem="rqJ-8y-Np5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n9m-w7-jYx" secondAttribute="trailing" constant="8" id="Gcn-Fp-mmf"/>
@@ -590,13 +596,16 @@
                                                     <constraint firstItem="E2k-Vn-xGe" firstAttribute="width" secondItem="pwF-wV-pef" secondAttribute="width" multiplier="0.278689" id="aaq-ut-1Aq"/>
                                                     <constraint firstItem="n9m-w7-jYx" firstAttribute="leading" secondItem="Dl6-cV-xQe" secondAttribute="trailing" constant="4" id="cAr-sp-Fyo"/>
                                                     <constraint firstItem="8LT-Ot-N2M" firstAttribute="centerY" secondItem="hWF-Y0-ZCE" secondAttribute="centerY" id="f8W-8d-aah"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2zU-8m-5ha" secondAttribute="trailing" constant="8" id="guE-A8-cBe"/>
                                                     <constraint firstItem="fOr-3v-7dl" firstAttribute="centerY" secondItem="3wF-2D-mdl" secondAttribute="centerY" id="izH-An-N9L"/>
                                                     <constraint firstItem="sON-3A-1K5" firstAttribute="top" secondItem="3wF-2D-mdl" secondAttribute="bottom" constant="60" id="kOq-Zh-IVb"/>
                                                     <constraint firstItem="sON-3A-1K5" firstAttribute="leading" secondItem="3wF-2D-mdl" secondAttribute="leading" id="kwx-u1-1CW"/>
                                                     <constraint firstItem="Dl6-cV-xQe" firstAttribute="top" secondItem="hWF-Y0-ZCE" secondAttribute="bottom" constant="38" id="mYl-NH-635"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2zU-8m-5ha" secondAttribute="bottom" constant="24" id="mZP-7f-gWd"/>
                                                     <constraint firstItem="yAa-7F-rW9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Uhr-A5-EUb" secondAttribute="trailing" constant="8" id="mjY-ft-JAU"/>
                                                     <constraint firstItem="n2A-iY-rHf" firstAttribute="centerY" secondItem="8az-8T-MgS" secondAttribute="centerY" id="mx2-jN-QgL"/>
                                                     <constraint firstItem="D1g-a5-8EH" firstAttribute="width" secondItem="pwF-wV-pef" secondAttribute="width" multiplier="0.226" id="naB-tH-AW9"/>
+                                                    <constraint firstItem="2zU-8m-5ha" firstAttribute="leading" secondItem="sON-3A-1K5" secondAttribute="leading" id="nti-nG-neX"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D1g-a5-8EH" secondAttribute="trailing" constant="8" id="oFC-nA-Lch"/>
                                                     <constraint firstItem="hWF-Y0-ZCE" firstAttribute="leading" secondItem="8az-8T-MgS" secondAttribute="leading" id="p5U-Ni-KIM"/>
                                                     <constraint firstItem="hWF-Y0-ZCE" firstAttribute="top" secondItem="8az-8T-MgS" secondAttribute="bottom" constant="56" id="pco-rQ-49i"/>
@@ -687,6 +696,7 @@
                         <outlet property="flagImage" destination="n2A-iY-rHf" id="B1Y-8p-PAb"/>
                         <outlet property="languageLabel" destination="fOr-3v-7dl" id="ojn-18-iLi"/>
                         <outlet property="languageResponse" destination="fZ0-ba-2tq" id="Um2-fW-erC"/>
+                        <outlet property="mapView" destination="2zU-8m-5ha" id="4X6-72-Zef"/>
                         <outlet property="navLabel" destination="osy-2y-ck5" id="Ufe-Mk-2Zk"/>
                         <outlet property="populationArea" destination="3wF-2D-mdl" id="Vt6-W3-XPw"/>
                         <outlet property="populationAreaResponse" destination="C0l-l0-OnY" id="P7b-k0-ND1"/>
@@ -700,7 +710,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Up7-6w-7Ie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8775" y="93"/>
+            <point key="canvasLocation" x="8773.8461538461543" y="92.417061611374407"/>
+        </scene>
+        <!--Map Controller-->
+        <scene sceneID="1nE-JI-28X">
+            <objects>
+                <viewController storyboardIdentifier="MapController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zm5-a3-nyJ" customClass="MapController" customModule="Country_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s9n-jN-rAa">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3N-dc-l4O">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7hn-uj-TVy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E3N-dc-l4O" firstAttribute="leading" secondItem="7hn-uj-TVy" secondAttribute="leading" id="20p-Zw-ncD"/>
+                            <constraint firstAttribute="bottom" secondItem="E3N-dc-l4O" secondAttribute="bottom" id="VQD-7m-bNy"/>
+                            <constraint firstItem="7hn-uj-TVy" firstAttribute="trailing" secondItem="E3N-dc-l4O" secondAttribute="trailing" id="bbG-ni-y6P"/>
+                            <constraint firstItem="E3N-dc-l4O" firstAttribute="top" secondItem="s9n-jN-rAa" secondAttribute="top" id="f1J-iJ-wva"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapview" destination="E3N-dc-l4O" id="dqd-iI-Udm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWG-wm-PuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9493" y="94"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="l90-M9-2cQ">
