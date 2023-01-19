@@ -272,17 +272,43 @@
             </objects>
             <point key="canvasLocation" x="5397" y="429"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz Controller-->
         <scene sceneID="VCy-1R-FVK">
             <objects>
-                <viewController id="U7S-Va-Vlg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U7S-Va-Vlg" customClass="QuizController" customModule="Country_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ad6-0B-hDX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="66e-nU-nk5">
+                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zoM-Ft-6Qo">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="U7S-Va-Vlg" id="hiP-HQ-IbA"/>
+                                    <outlet property="delegate" destination="U7S-Va-Vlg" id="hpe-37-uPk"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="miV-Rf-9kC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="66e-nU-nk5" firstAttribute="leading" secondItem="miV-Rf-9kC" secondAttribute="leading" id="BXh-m7-4dC"/>
+                            <constraint firstItem="66e-nU-nk5" firstAttribute="top" secondItem="miV-Rf-9kC" secondAttribute="top" id="NQq-yV-edC"/>
+                            <constraint firstItem="miV-Rf-9kC" firstAttribute="trailing" secondItem="66e-nU-nk5" secondAttribute="trailing" id="UO1-Te-3kz"/>
+                            <constraint firstItem="miV-Rf-9kC" firstAttribute="bottom" secondItem="66e-nU-nk5" secondAttribute="bottom" id="im8-dH-oBu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fjJ-u3-fp0"/>
+                    <connections>
+                        <outlet property="collectionView" destination="66e-nU-nk5" id="w7U-X4-X7z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIj-Uh-6zX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

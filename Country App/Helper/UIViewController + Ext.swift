@@ -7,16 +7,16 @@
 
 import Foundation
 import UIKit
-import ProgressHUD
+//import ProgressHUD
 
 //MARK: Progress
 extension UIViewController {
     func showLoader() {
-        ProgressHUD.show()
+//        ProgressHUD.show()
     }
     
     func dismissLoader() {
-        ProgressHUD.dismiss()
+//        ProgressHUD.dismiss()
     }
 }
 
