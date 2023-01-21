@@ -29,7 +29,7 @@ extension QuizHeaderView : UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/2 - 20, height: 70)
+        return CGSize(width: collectionView.frame.width/3 - 48, height: 80)
     }
     
 }

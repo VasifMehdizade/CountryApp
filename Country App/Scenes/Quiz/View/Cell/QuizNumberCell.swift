@@ -10,5 +10,10 @@ import UIKit
 class QuizNumberCell: UICollectionViewCell {
     
     @IBOutlet weak var quizNumberLabel: UILabel!
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        self.layer.cornerRadius = self.frame.size.width / 2
+    }
 
 }

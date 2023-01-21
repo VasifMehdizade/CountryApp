@@ -9,6 +9,8 @@ import UIKit
 
 class QuizController: UIViewController {
     
+    @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +21,15 @@ class QuizController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    @IBAction func exitButtonTapped(_ sender: Any) {
+    }
     
     func registerCollectionView () {
         collectionView.register(UINib(nibName: "\(QuizHeaderView.self)", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "\(QuizHeaderView.self)")
     }
     
     func registerCell() {
-        collectionView.register(UINib(nibName: "\(QuizNumberCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(QuizNumberCell.self)")
+        collectionView.register(UINib(nibName: "\(QuizCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(QuizCollectionViewCell.self)")
     }
     
 }
@@ -36,7 +40,7 @@ extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuizNumberCell", for: indexPath) as! QuizNumberCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuizCollectionViewCell", for: indexPath) as! QuizCollectionViewCell
         return cell
     }
     
@@ -53,7 +57,7 @@ extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.width, height: 100)
+        CGSize(width: collectionView.frame.width, height: 120)
     }
     
 }

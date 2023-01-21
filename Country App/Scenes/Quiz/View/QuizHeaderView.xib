@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="upU-uw-ifA">
-                    <rect key="frame" x="0.0" y="0.0" width="406" height="171"/>
+                    <rect key="frame" x="8" y="0.0" width="390" height="171"/>
                     <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9tv-B3-IbI">
                         <size key="itemSize" width="128" height="128"/>
@@ -31,9 +31,9 @@
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
                 <constraint firstItem="upU-uw-ifA" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Agb-Pr-arO"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="upU-uw-ifA" secondAttribute="trailing" id="E17-2x-TRA"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="upU-uw-ifA" secondAttribute="trailing" constant="8" id="E17-2x-TRA"/>
                 <constraint firstAttribute="bottom" secondItem="upU-uw-ifA" secondAttribute="bottom" id="R7E-6u-9Pt"/>
-                <constraint firstItem="upU-uw-ifA" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="cs8-Sm-O37"/>
+                <constraint firstItem="upU-uw-ifA" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="8" id="cs8-Sm-O37"/>
             </constraints>
             <connections>
                 <outlet property="collectionView" destination="upU-uw-ifA" id="nKJ-9A-7oO"/>
