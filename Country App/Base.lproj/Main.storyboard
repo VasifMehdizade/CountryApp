@@ -272,6 +272,55 @@
             </objects>
             <point key="canvasLocation" x="5397" y="429"/>
         </scene>
+        <!--Entrance Quiz Controller-->
+        <scene sceneID="Rc7-ta-bU7">
+            <objects>
+                <viewController storyboardIdentifier="EntranceQuizController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DlQ-Kx-b0F" customClass="EntranceQuizController" customModule="Country_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lTc-JU-fwc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Yourself" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmi-ZI-Paa">
+                                <rect key="frame" x="131" y="171" width="128" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW8-vH-nTe">
+                                <rect key="frame" x="131" y="396" width="128" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1yZ-NU-ySE"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Questions"/>
+                                <connections>
+                                    <action selector="questionsButtonTapped:" destination="DlQ-Kx-b0F" eventType="touchUpInside" id="JiJ-J2-sWT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K3y-uQ-oin"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="fmi-ZI-Paa" firstAttribute="centerX" secondItem="K3y-uQ-oin" secondAttribute="centerX" id="7Qz-xi-Kax"/>
+                            <constraint firstItem="AW8-vH-nTe" firstAttribute="leading" secondItem="fmi-ZI-Paa" secondAttribute="leading" id="EU6-KI-VrO"/>
+                            <constraint firstItem="AW8-vH-nTe" firstAttribute="trailing" secondItem="fmi-ZI-Paa" secondAttribute="trailing" id="GE8-Al-BPj"/>
+                            <constraint firstItem="fmi-ZI-Paa" firstAttribute="top" secondItem="K3y-uQ-oin" secondAttribute="top" constant="80" id="Kvn-px-Cy5"/>
+                            <constraint firstItem="AW8-vH-nTe" firstAttribute="centerX" secondItem="K3y-uQ-oin" secondAttribute="centerX" id="TLI-U2-v1x"/>
+                            <constraint firstItem="AW8-vH-nTe" firstAttribute="centerY" secondItem="K3y-uQ-oin" secondAttribute="centerY" id="keC-8x-Xgr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="y4M-x3-Rf4"/>
+                    <connections>
+                        <outlet property="questionsButton" destination="AW8-vH-nTe" id="AHm-xB-bDo"/>
+                        <outlet property="titleLabel" destination="fmi-ZI-Paa" id="D6J-IA-ASd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2A9-HK-76A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8057" y="903"/>
+        </scene>
         <!--Quiz Controller-->
         <scene sceneID="VCy-1R-FVK">
             <objects>
@@ -281,7 +330,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="66e-nU-nk5">
-                                <rect key="frame" x="0.0" y="91" width="390" height="610"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="703"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zoM-Ft-6Qo">
                                     <size key="itemSize" width="128" height="128"/>
@@ -296,14 +345,14 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-4H-Gzb">
-                                <rect key="frame" x="12" y="720" width="24" height="21"/>
+                                <rect key="frame" x="12" y="769" width="24" height="21"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-VO-aN5">
-                                <rect key="frame" x="326" y="713" width="52" height="35"/>
+                                <rect key="frame" x="326" y="762" width="52" height="35"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Exit"/>
@@ -334,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIj-Uh-6zX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8057" y="883"/>
+            <point key="canvasLocation" x="8775" y="903"/>
         </scene>
         <!--Main Page Controller-->
         <scene sceneID="Yoa-Yo-euL">
@@ -763,6 +812,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="l90-M9-2cQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ty-mB-hBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wBk-5i-q9t" customClass="TabBarController" customModule="Country_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="vDI-tG-4dn">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
@@ -772,10 +822,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="6Uo-qV-k25" kind="relationship" relationship="viewControllers" id="uxi-L4-fEC"/>
-                        <segue destination="KRp-vA-97h" kind="relationship" relationship="viewControllers" id="ppR-gu-rSB"/>
+                        <segue destination="5jQ-kl-BXU" kind="relationship" relationship="viewControllers" id="em4-Vb-6l1"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ty-mB-hBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6416.9230769230771" y="375.35545023696682"/>
         </scene>
@@ -815,23 +864,23 @@
             <point key="canvasLocation" x="3940" y="375"/>
         </scene>
         <!--Quiz-->
-        <scene sceneID="ums-c6-d30">
+        <scene sceneID="ZRt-WC-ZuG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KRp-vA-97h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quiz" image="tray.2" catalog="system" id="tlE-4E-eRd"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5jQ-kl-BXU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quiz" image="person.fill.questionmark" catalog="system" id="rBD-c7-5nw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TLZ-rg-Jah">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BUj-Cl-Chd">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="U7S-Va-Vlg" kind="relationship" relationship="rootViewController" id="gqx-u3-44N"/>
+                        <segue destination="DlQ-Kx-b0F" kind="relationship" relationship="rootViewController" id="fUW-cC-QOa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bs3-SH-HXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVc-rp-CYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7321.538461538461" y="882.93838862559232"/>
+            <point key="canvasLocation" x="7347.6923076923076" y="902.84360189573454"/>
         </scene>
     </scenes>
     <resources>
@@ -839,12 +888,18 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="tray.2" catalog="system" width="128" height="115"/>
+        <image name="person.fill.questionmark" catalog="system" width="128" height="102"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

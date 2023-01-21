@@ -24,7 +24,7 @@ extension QuizHeaderView : UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuizNumberCell", for: indexPath) as! QuizNumberCell
-        cell.quizNumberLabel.text = "2"
+//        cell.quizNumberLabel.text = "2"
         return cell
     }
     

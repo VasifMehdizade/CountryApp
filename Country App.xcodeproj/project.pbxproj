@@ -39,6 +39,7 @@
 		2AD047432922BF49000DE777 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD047422922BF49000DE777 /* UIViewController + Ext.swift */; };
 		2AE95812297C4AB80046C301 /* QuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE95810297C4AB80046C301 /* QuizCollectionViewCell.swift */; };
 		2AE95813297C4AB90046C301 /* QuizCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE95811297C4AB80046C301 /* QuizCollectionViewCell.xib */; };
+		2AE95815297C54D60046C301 /* EntranceQuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE95814297C54D60046C301 /* EntranceQuizController.swift */; };
 		2AEA28912955DF8600F45529 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA28902955DF8600F45529 /* TabBarController.swift */; };
 		2AFC6AB22935397600A79EEE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFC6AB12935397600A79EEE /* LoginModel.swift */; };
 		2AFC6AB429353B4900A79EEE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFC6AB329353B4900A79EEE /* LoginViewModel.swift */; };
@@ -81,6 +82,7 @@
 		2AD047422922BF49000DE777 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 		2AE95810297C4AB80046C301 /* QuizCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCollectionViewCell.swift; sourceTree = "<group>"; };
 		2AE95811297C4AB80046C301 /* QuizCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizCollectionViewCell.xib; sourceTree = "<group>"; };
+		2AE95814297C54D60046C301 /* EntranceQuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceQuizController.swift; sourceTree = "<group>"; };
 		2AEA28902955DF8600F45529 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2AFC6AB12935397600A79EEE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		2AFC6AB329353B4900A79EEE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				2AC7C72E2979C00900E94372 /* QuizController.swift */,
+				2AE95814297C54D60046C301 /* EntranceQuizController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				2A0990EC293A565B00D760EA /* HomePageViewCell.swift in Sources */,
 				2AA076682923730E00D779B8 /* LoginController.swift in Sources */,
 				2A6ED82E294EF44A00ADEED8 /* DetailController.swift in Sources */,
+				2AE95815297C54D60046C301 /* EntranceQuizController.swift in Sources */,
 				2A0F3B4C293A1B480095DB53 /* HomePageManager.swift in Sources */,
 				2A64A52D2922BE3F0012901E /* NetworkManager.swift in Sources */,
 				2A1C619D2926B65700DCCBBE /* RegisterController.swift in Sources */,

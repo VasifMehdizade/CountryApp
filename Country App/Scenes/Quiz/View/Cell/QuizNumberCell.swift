@@ -9,11 +9,13 @@ import UIKit
 
 class QuizNumberCell: UICollectionViewCell {
     
-    @IBOutlet weak var quizNumberLabel: UILabel!
+    @IBOutlet weak var quizNumberButton: UIButton!
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         self.layer.cornerRadius = self.frame.size.width / 2
     }
 
+    @IBAction func quizNumberButtonTapped(_ sender: Any) {
+    }
 }

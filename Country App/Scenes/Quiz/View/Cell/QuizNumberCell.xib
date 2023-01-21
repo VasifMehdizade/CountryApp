@@ -17,23 +17,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXN-SM-LzM">
-                        <rect key="frame" x="41" y="51.666666666666664" width="42" height="20.999999999999993"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAj-Zu-3MS">
+                        <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="2"/>
+                        <connections>
+                            <action selector="quizNumberButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="OaR-Ne-Awh"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" systemColor="systemPurpleColor"/>
             <constraints>
-                <constraint firstItem="NXN-SM-LzM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Cd4-Eh-dCz"/>
-                <constraint firstItem="NXN-SM-LzM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="FhS-u8-kmX"/>
+                <constraint firstItem="jAj-Zu-3MS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9PC-os-5ra"/>
+                <constraint firstAttribute="bottom" secondItem="jAj-Zu-3MS" secondAttribute="bottom" id="bM3-40-9UE"/>
+                <constraint firstAttribute="trailing" secondItem="jAj-Zu-3MS" secondAttribute="trailing" id="nXT-ia-xfq"/>
+                <constraint firstItem="jAj-Zu-3MS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="z3p-s3-Zax"/>
             </constraints>
             <size key="customSize" width="124" height="115"/>
             <connections>
-                <outlet property="quizNumberLabel" destination="NXN-SM-LzM" id="9TX-o0-wmj"/>
+                <outlet property="quizNumberButton" destination="jAj-Zu-3MS" id="Evd-pO-jyF"/>
             </connections>
             <point key="canvasLocation" x="76.33587786259541" y="22.183098591549296"/>
         </collectionViewCell>
