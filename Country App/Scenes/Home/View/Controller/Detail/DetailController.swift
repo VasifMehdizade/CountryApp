@@ -49,8 +49,14 @@ class DetailController: UIViewController , CLLocationManagerDelegate {
         colorfulView.layer.borderWidth = 1.5
         colorfulView.layer.borderColor = UIColor.black.cgColor
         initila()
+//        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

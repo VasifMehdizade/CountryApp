@@ -25,14 +25,14 @@ class QuizController: UIViewController {
     }
     
     func registerCell() {
-        collectionView.register(UINib(nibName: "QuizNumberCell", bundle: nil), forCellWithReuseIdentifier: "QuizNumberCell")
+        collectionView.register(UINib(nibName: "\(QuizNumberCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(QuizNumberCell.self)")
     }
     
 }
 
-extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource {
+extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,14 +45,6 @@ extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource 
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(QuizHeaderView.self)", for: indexPath) as! QuizHeaderView
-            
-//            headerView.viewModel.getMyList {
-//                for num in headerView.viewModel.items {
-//                    if num.movieId == self.movieId {
-//                        headerView.bookmarkIcon.setImage(UIImage(named: "bookmarkRed"), for: .normal)
-//                    }
-//                }
-//            }
                 
             return headerView
         default:
@@ -60,5 +52,8 @@ extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource 
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: 100)
+    }
     
 }

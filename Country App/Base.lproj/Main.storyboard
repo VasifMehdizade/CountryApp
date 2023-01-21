@@ -282,7 +282,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="66e-nU-nk5">
                                 <rect key="frame" x="0.0" y="91" width="390" height="670"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zoM-Ft-6Qo">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -792,11 +792,11 @@
             </objects>
             <point key="canvasLocation" x="3940" y="375"/>
         </scene>
-        <!--Item 2-->
+        <!--Quiz-->
         <scene sceneID="ums-c6-d30">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KRp-vA-97h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" image="tray.2" catalog="system" id="tlE-4E-eRd"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="tray.2" catalog="system" id="tlE-4E-eRd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TLZ-rg-Jah">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -823,6 +823,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
