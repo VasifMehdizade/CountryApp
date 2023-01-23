@@ -19,3 +19,14 @@ class QuizNumberCell: UICollectionViewCell {
     @IBAction func quizNumberButtonTapped(_ sender: Any) {
     }
 }
+
+
+//"options": [
+//    {
+//        "optionOne": "yes",
+//        "optionTwo": "no",
+//        "optionThree": "good",
+//        "optionFour": "ela",
+//        "rightAnswer": "yes"
+//    }
+//]

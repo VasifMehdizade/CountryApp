@@ -2,40 +2,28 @@
     {
         "question": "How are you?",
         "questionNumber": 1,
-        "options": [
-            {
-                "optionOne": "yes",
-                "optionTwo": "no",
-                "optionThree": "good",
-                "optionFour": "ela",
-                "rightAnswer": "yes"
-            }
-        ]
+        "optionOne": "yes",
+        "optionTwo": "no",
+        "optionThree": "asd",
+        "optionFour": "dasd",
+        "rightAnswer": "dasd"
     },
     {
-        "question": "What is you name"
+        "question": "What is you name",
         "questionNumber": 2,
-        "options": [
-            {
-                "optionOne": "yes",
-                "optionTwo": "no",
-                "optionThree": "good",
-                "optionFour": "ela",
-                "rightAnswer": "yes"
-            }
-        ]
+        "optionOne": "yes",
+        "optionTwo": "no",
+        "optionThree": "asd",
+        "optionFour": "dasd",
+        "rightAnswer": "dasd"
     },
     {
         "question": "What is you purpose of visit?",
         "questionNumber": 3,
-        "options": [
-            {
-                "optionOne": "yes",
-                "optionTwo": "no",
-                "optionThree": "good",
-                "optionFour": "ela",
-                "rightAnswer": "yes"
-            }
-        ]
+        "optionOne": "yes",
+        "optionTwo": "no",
+        "optionThree": "asd",
+        "optionFour": "dasd",
+        "rightAnswer": "dasd"
     }
 ]

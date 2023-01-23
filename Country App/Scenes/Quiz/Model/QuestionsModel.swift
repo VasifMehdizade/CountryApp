@@ -7,16 +7,21 @@
 
 import Foundation
 
-struct Questions {
+struct Questions: Codable {
     let question : String
     let questionNumber : Int
-    let optios : [Options]
+    let optionOne : String
+    let optionTwo : String
+    let optionThree : String
+    let optionFour : String
+    let rightAnswer : String
+    //    let options : [Options]
 }
 
-struct Options {
-    let optionsOne : String
-    let optionsTwo : String
-    let optionsThree : String
-    let optionsFour : String
-    let rightOptions : String
-}
+//struct Options: Codable {
+//    let optionsOne : String
+//    let optionsTwo : String
+//    let optionsThree : String
+//    let optionsFour : String
+//    let rightOptions : String
+//}
