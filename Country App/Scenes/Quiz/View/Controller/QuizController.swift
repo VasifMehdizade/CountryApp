@@ -22,6 +22,7 @@ class QuizController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     @IBAction func exitButtonTapped(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func registerCollectionView () {
@@ -36,7 +37,7 @@ class QuizController: UIViewController {
 
 extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -49,7 +50,6 @@ extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource,
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(QuizHeaderView.self)", for: indexPath) as! QuizHeaderView
-                
             return headerView
         default:
             assert(false, "Unexpected element kind")

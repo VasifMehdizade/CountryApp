@@ -13,5 +13,14 @@ class QuizCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var optionThree: UIButton!
     @IBOutlet weak var optionTwo: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
-
+    
+    
+    @IBAction func optionOneTapped(_ sender: Any) {
+    }
+    @IBAction func optionTwoTapped(_ sender: Any) {
+    }
+    @IBAction func optionThreeTapped(_ sender: Any) {
+    }
+    @IBAction func optionFourTapped(_ sender: Any) {
+    }
 }

@@ -37,12 +37,18 @@
                                                 <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="optionOneTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="u8Q-jz-5vW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DH-6l-fsU">
                                                 <rect key="frame" x="157.66666666666663" y="0.0" width="137.33333333333337" height="34.333333333333336"/>
                                                 <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="optionTwoTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ejV-ax-bTB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -54,12 +60,19 @@
                                                 <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="optionThreeTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="shc-Wh-YT1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6t1-ld-0Yp">
                                                 <rect key="frame" x="157.66666666666663" y="0.0" width="137.33333333333337" height="34.333333333333336"/>
                                                 <color key="backgroundColor" red="1" green="0.47843137250000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="optionFourTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vkn-GN-GPS"/>
+                                                    <action selector="optionThreeTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gPX-PD-Z46"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

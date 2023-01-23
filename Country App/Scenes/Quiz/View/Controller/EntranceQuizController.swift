@@ -13,7 +13,6 @@ class EntranceQuizController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func questionsButtonTapped(_ sender: Any) {
