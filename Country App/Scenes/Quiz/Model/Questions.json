@@ -1,29 +1,65 @@
 [
     {
-        "question": "How are you?",
-        "questionNumber": 1,
-        "optionOne": "yes",
-        "optionTwo": "no",
-        "optionThree": "asd",
-        "optionFour": "dasd",
-        "rightAnswer": "dasd"
+        "question": "Which is brother country?",
+        "questionNumber": "1",
+        "optionOne": "Turkiye",
+        "optionTwo": "Russia",
+        "optionThree": "Banglades",
+        "optionFour": "Germany",
+        "rightAnswer": "Turkiye"
     },
     {
-        "question": "What is you name",
-        "questionNumber": 2,
-        "optionOne": "yes",
-        "optionTwo": "no",
-        "optionThree": "asd",
-        "optionFour": "dasd",
-        "rightAnswer": "dasd"
+        "question": "Which one is bigger than others?",
+        "questionNumber": "2",
+        "optionOne": "Iran",
+        "optionTwo": "Armenia",
+        "optionThree": "Russia",
+        "optionFour": "Latvia",
+        "rightAnswer": "Russia"
     },
     {
-        "question": "What is you purpose of visit?",
-        "questionNumber": 3,
-        "optionOne": "yes",
-        "optionTwo": "no",
-        "optionThree": "asd",
-        "optionFour": "dasd",
-        "rightAnswer": "dasd"
+        "question": "Which city is capital?",
+        "questionNumber": "3",
+        "optionOne": "Istanbul",
+        "optionTwo": "Baku",
+        "optionThree": "Gum",
+        "optionFour": "Barcelona",
+        "rightAnswer": "Baku"
+    },
+    {
+        "question": "Which one is in America?",
+        "questionNumber": "4",
+        "optionOne": "Budapest",
+        "optionTwo": "Kars",
+        "optionThree": "Newyork",
+        "optionFour": "Baku",
+        "rightAnswer": "Newyork"
+    },
+    {
+        "question": "Which one is bigger?",
+        "questionNumber": "5",
+        "optionOne": "Switzerland",
+        "optionTwo": "Azerbaijan",
+        "optionThree": "Turkiye",
+        "optionFour": "USA",
+        "rightAnswer": "USA"
+    },
+    {
+        "question": "Which flag does have red color?",
+        "questionNumber": "6",
+        "optionOne": "Russia",
+        "optionTwo": "Saudi Arabia",
+        "optionThree": "Kazakistan",
+        "optionFour": "Finland",
+        "rightAnswer": "Russia"
+    },
+    {
+        "question": "Which has more population?",
+        "questionNumber": "7",
+        "optionOne": "Greece",
+        "optionTwo": "China",
+        "optionThree": "South Korea",
+        "optionFour": "Niderland",
+        "rightAnswer": "China"
     }
 ]

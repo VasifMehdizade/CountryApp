@@ -70,11 +70,27 @@ extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuizNumberCell", for: indexPath) as! QuizNumberCell
+        cell.delegate = self
+        cell.index = indexPath.row
+        let data = questionModel[indexPath.row]
+        cell.questionLabel.text = data.questionNumber
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.width, height: 120)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width/3 - 48, height: 76)
+    }
+    
+}
+
+extension QuizController: QuizNumberCellProtocol {
+    func quizNumberButtonCalled(index: Int) {
+        let data = questionModel[index]
+        questionLabel.text = data.question
+        optionOne.setTitle("\(data.optionOne)", for: .normal)
+        optionTwo.setTitle("\(data.optionTwo)", for: .normal)
+        optionThree.setTitle("\(data.optionThree)", for: .normal)
+        optionFour.setTitle("\(data.optionFour)", for: .normal)
     }
     
 }
