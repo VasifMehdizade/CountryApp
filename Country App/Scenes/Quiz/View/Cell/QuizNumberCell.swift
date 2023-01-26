@@ -20,13 +20,3 @@ class QuizNumberCell: UICollectionViewCell {
     }
 }
 
-
-//"options": [
-//    {
-//        "optionOne": "yes",
-//        "optionTwo": "no",
-//        "optionThree": "good",
-//        "optionFour": "ela",
-//        "rightAnswer": "yes"
-//    }
-//]

@@ -9,6 +9,11 @@ import UIKit
 
 class QuizController: UIViewController {
     
+    @IBOutlet weak var optionFour: UIButton!
+    @IBOutlet weak var optionThree: UIButton!
+    @IBOutlet weak var optionTwo: UIButton!
+    @IBOutlet weak var optionOne: UIButton!
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -18,10 +23,8 @@ class QuizController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCollectionView()
         registerCell()
         jsonSetup()
-        findModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,9 +33,14 @@ class QuizController: UIViewController {
     @IBAction func exitButtonTapped(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
+    @IBAction func optionOneTapped(_ sender: Any) {
+    }
     
-    func registerCollectionView () {
-        collectionView.register(UINib(nibName: "\(QuizHeaderView.self)", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "\(QuizHeaderView.self)")
+    @IBAction func optionTwoTapped(_ sender: Any) {
+    }
+    @IBAction func optionThreeTapped(_ sender: Any) {
+    }
+    @IBAction func optionFourTapped(_ sender: Any) {
     }
     
     func jsonSetup() {
@@ -49,17 +57,8 @@ class QuizController: UIViewController {
         }
     }
     
-    
     func registerCell() {
-        collectionView.register(UINib(nibName: "\(QuizCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(QuizCollectionViewCell.self)")
-    }
-    
-    func findModel (){
-        for num in questionModel {
-            if num.questionNumber == 1{
-                print("sad,sdjnfzads,nf,sadnf,samdnf,amsdnf")
-            }
-        }
+        collectionView.register(UINib(nibName: "\(QuizNumberCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(QuizNumberCell.self)")
     }
     
 }
@@ -70,19 +69,8 @@ extension QuizController : UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuizCollectionViewCell", for: indexPath) as! QuizCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuizNumberCell", for: indexPath) as! QuizNumberCell
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        switch kind {
-        case UICollectionView.elementKindSectionHeader:
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(QuizHeaderView.self)", for: indexPath) as! QuizHeaderView
-            return headerView
-        default:
-            assert(false, "Unexpected element kind")
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
