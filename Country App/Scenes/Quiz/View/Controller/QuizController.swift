@@ -18,13 +18,17 @@ class QuizController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var rightAnswer = QuizNumberCell()
+    
     var viewModel = QuizViewModel()
+    
     var questionModel = [Questions]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
         jsonSetup()
+        quizNumberButtonCalled(index: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,14 +37,23 @@ class QuizController: UIViewController {
     @IBAction func exitButtonTapped(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
+    
     @IBAction func optionOneTapped(_ sender: Any) {
+        if questionModel[rightAnswer.index].optionOne == questionModel[rightAnswer.index].rightAnswer {
+            print("dasdasd")
+        }
     }
     
     @IBAction func optionTwoTapped(_ sender: Any) {
+        
     }
+    
     @IBAction func optionThreeTapped(_ sender: Any) {
+        
     }
+    
     @IBAction func optionFourTapped(_ sender: Any) {
+        
     }
     
     func jsonSetup() {
@@ -91,6 +104,7 @@ extension QuizController: QuizNumberCellProtocol {
         optionTwo.setTitle("\(data.optionTwo)", for: .normal)
         optionThree.setTitle("\(data.optionThree)", for: .normal)
         optionFour.setTitle("\(data.optionFour)", for: .normal)
+        
     }
     
 }
