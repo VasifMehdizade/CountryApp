@@ -16,7 +16,7 @@ class EntranceQuizController: UIViewController {
     }
 
     @IBAction func questionsButtonTapped(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "QuizController") as! QuizController
+        let controller = storyboard?.instantiateViewController(withIdentifier: "QuestionListController") as! QuestionListController
         self.navigationController?.show(controller, sender: nil)
     }
     

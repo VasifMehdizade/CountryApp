@@ -16,4 +16,3 @@ struct Questions: Codable {
     let optionFour : String
     let rightAnswer : String
 }
-
